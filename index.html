@@ -17,9 +17,12 @@
       text-align: center; 
       border-bottom: 2px solid #D4AF37; 
     }
-    .hero h1 { font-size: 2.8rem; margin: 20px 0; }
+    .hero h1 { font-size: 2.8rem; margin: 20px 0; line-height: 1.2; }
     .hero p { font-size: 1.2rem; color: #ddd; margin-bottom: 30px; }
-    .cta { background: #D4AF37; color: #0a0a0a; padding: 16px 45px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; display: inline-block; margin: 5px; transition: 0.3s; }
+    
+    /* THIS IS THE FIX FOR SIDE-BY-SIDE BUTTONS */
+    .btn-group { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+    .cta { background: #D4AF37; color: #0a0a0a; padding: 16px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; display: inline-block; transition: 0.3s; }
     .cta:hover { transform: scale(1.05); }
     .cta-outline { background: transparent; border: 2px solid #D4AF37; color: #D4AF37; }
     .tag { color: #D4AF37; font-size: 0.9rem; letter-spacing: 2px; }
@@ -57,8 +60,11 @@
     <p class="tag">PART OF QTP GROUP OF COMPANIES</p>
     <h1 class="gold">Websites That Turn Clicks Into Customers</h1>
     <p>Elite, fast, mobile-first websites for businesses in South Africa</p>
-    <a href="https://wa.me/27837327440" class="cta">WhatsApp Us</a>
-    <a href="#portfolio" class="cta cta-outline">View Portfolio</a>
+    
+    <div class="btn-group">
+      <a href="https://wa.me/27837327440" class="cta">WhatsApp Us</a>
+      <a href="#portfolio" class="cta cta-outline">View Portfolio</a>
+    </div>
   </section>
 
   <section class="section">
@@ -86,7 +92,6 @@
     <h2>Our <span class="gold">Portfolio</span></h2>
     <p style="text-align:center; margin-bottom:40px; color:#ccc;">Real websites we've built for real businesses</p>
     <div class="grid">
-      
       <div class="portfolio-card">
         <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800" class="portfolio-img" alt="Afrika Tours">
         <div class="portfolio-info">
@@ -95,7 +100,6 @@
           <a href="https://afrika-travel-tours.vercel.app" target="_blank">View Live Site →</a>
         </div>
       </div>
-      
       <div class="portfolio-card">
         <img src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?q=80&w=800" class="portfolio-img" alt="Salvation City">
         <div class="portfolio-info">
@@ -104,7 +108,6 @@
           <a href="https://salvation-city-of-all-nations.vercel.app" target="_blank">View Live Site →</a>
         </div>
       </div>
-      
       <div class="portfolio-card">
         <img src="https://images.unsplash.com/photo-1556740772-1a741367b93e?q=80&w=800" class="portfolio-img" alt="Coming Soon">
         <div class="portfolio-info">
@@ -113,7 +116,6 @@
           <a href="#contact">Get Started →</a>
         </div>
       </div>
-      
     </div>
   </section>
 
@@ -141,7 +143,6 @@
   <section class="section" id="contact" style="background:#0f0f0f;">
     <h2>Let's <span class="gold">Connect</span></h2>
     <p style="text-align:center; margin-bottom:40px; color:#ccc;">Ready to build a website that brings customers 24/7?</p>
-    
     <div class="contact-grid">
       <div class="contact-card">
         <div class="contact-icon">💬</div>
@@ -151,7 +152,6 @@
         <br><br>
         <a href="https://wa.me/27837327440" class="cta">Chat Now</a>
       </div>
-      
       <div class="contact-card">
         <div class="contact-icon">📧</div>
         <h3>Email</h3>
