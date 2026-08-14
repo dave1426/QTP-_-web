@@ -9,18 +9,43 @@
     body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #0a0a0a; color: #fff; line-height: 1.6; }
     .gold { color: #D4AF37; }
     
+    /* HERO VIDEO */
     .hero { 
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1170'); 
-      background-size: cover;
-      background-position: center;
-      padding: 120px 20px; 
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center; 
       border-bottom: 2px solid #D4AF37; 
+      overflow: hidden;
+      padding: 20px;
+    }
+    .hero-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      z-index: -2;
+      object-fit: cover;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.65);
+      z-index: -1;
     }
     .hero h1 { font-size: 2.8rem; margin: 20px 0; line-height: 1.2; }
     .hero p { font-size: 1.2rem; color: #ddd; margin-bottom: 30px; }
     
-    /* THIS IS THE FIX FOR SIDE-BY-SIDE BUTTONS */
     .btn-group { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
     .cta { background: #D4AF37; color: #0a0a0a; padding: 16px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; display: inline-block; transition: 0.3s; }
     .cta:hover { transform: scale(1.05); }
@@ -35,9 +60,10 @@
     .card img { width: 60px; margin-bottom: 15px; }
     .card h3 { color: #D4AF37; margin-bottom: 15px; font-size: 1.3rem; }
     
+    /* PORTFOLIO WITH YOUR IMAGES */
     .portfolio-card { background: #111; border-radius: 15px; border: 1px solid #222; overflow: hidden; transition: 0.3s; }
     .portfolio-card:hover { border-color: #D4AF37; transform: translateY(-5px); }
-    .portfolio-img { width: 100%; height: 220px; object-fit: cover; background: #1a1a1a; }
+    .portfolio-img { width: 100%; height: 240px; object-fit: cover; background: #1a1a1a; }
     .portfolio-info { padding: 25px; }
     .portfolio-info h3 { color: #D4AF37; margin-bottom: 10px; }
     .portfolio-info a { color: #D4AF37; text-decoration: none; font-weight: bold; }
@@ -57,6 +83,12 @@
 <body>
 
   <section class="hero">
+    <!-- VIDEO BACKGROUND -->
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="https://videos.pexels.com/video-files/3182759/3182759-uhd-2560-1440-30fps.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    
     <p class="tag">PART OF QTP GROUP OF COMPANIES</p>
     <h1 class="gold">Websites That Turn Clicks Into Customers</h1>
     <p>Elite, fast, mobile-first websites for businesses in South Africa</p>
@@ -92,22 +124,25 @@
     <h2>Our <span class="gold">Portfolio</span></h2>
     <p style="text-align:center; margin-bottom:40px; color:#ccc;">Real websites we've built for real businesses</p>
     <div class="grid">
+      
       <div class="portfolio-card">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800" class="portfolio-img" alt="Afrika Tours">
+        <img src="afrika.jpg" class="portfolio-img" alt="Afrika Tours">
         <div class="portfolio-info">
           <h3>Afrika Travel Tours</h3>
           <p>Tourism website with booking system and tour packages. Mobile-first design.</p>
           <a href="https://afrika-travel-tours.vercel.app" target="_blank">View Live Site →</a>
         </div>
       </div>
+      
       <div class="portfolio-card">
-        <img src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?q=80&w=800" class="portfolio-img" alt="Salvation City">
+        <img src="salvation.jpg" class="portfolio-img" alt="Salvation City">
         <div class="portfolio-info">
           <h3>Salvation City of All Nations</h3>
           <p>Church website with events, sermons, and donation system. Clean + modern.</p>
           <a href="https://salvation-city-of-all-nations.vercel.app" target="_blank">View Live Site →</a>
         </div>
       </div>
+      
       <div class="portfolio-card">
         <img src="https://images.unsplash.com/photo-1556740772-1a741367b93e?q=80&w=800" class="portfolio-img" alt="Coming Soon">
         <div class="portfolio-info">
@@ -116,6 +151,7 @@
           <a href="#contact">Get Started →</a>
         </div>
       </div>
+      
     </div>
   </section>
 
@@ -168,4 +204,4 @@
   </footer>
 
 </body>
-</html>
+          </html>
