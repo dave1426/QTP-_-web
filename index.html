@@ -19,22 +19,27 @@
     }
     .hero h1 { font-size: 2.8rem; margin: 20px 0; }
     .hero p { font-size: 1.2rem; color: #ddd; margin-bottom: 30px; }
-    .cta { background: #D4AF37; color: #0a0a0a; padding: 16px 45px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; display: inline-block; margin: 5px; }
+    .cta { background: #D4AF37; color: #0a0a0a; padding: 16px 45px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; display: inline-block; margin: 5px; transition: 0.3s; }
+    .cta:hover { transform: scale(1.05); }
     .cta-outline { background: transparent; border: 2px solid #D4AF37; color: #D4AF37; }
     .tag { color: #D4AF37; font-size: 0.9rem; letter-spacing: 2px; }
     
     .section { padding: 80px 20px; max-width: 1100px; margin: auto; }
     .section h2 { text-align:center; margin-bottom:50px; font-size: 2.2rem; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-    .card { background: #111; padding: 35px; border-radius: 15px; border: 1px solid #222; text-align: center; }
+    .card { background: #111; padding: 35px; border-radius: 15px; border: 1px solid #222; text-align: center; transition: 0.3s; }
+    .card:hover { border-color: #D4AF37; transform: translateY(-5px); }
     .card img { width: 60px; margin-bottom: 15px; }
     .card h3 { color: #D4AF37; margin-bottom: 15px; font-size: 1.3rem; }
     
     .pricing { text-align: center; }
     .price { font-size: 2.5rem; color: #D4AF37; font-weight: bold; }
     
-    .contact-box { background: #111; padding: 40px; border-radius: 15px; border: 1px solid #D4AF37; text-align: center; }
-    .contact-box a { color: #D4AF37; text-decoration: none; font-size: 1.2rem; display: block; margin: 10px 0; }
+    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 30px; }
+    .contact-card { background: #111; padding: 30px; border-radius: 15px; border: 1px solid #222; text-align: center; }
+    .contact-card:hover { border-color: #D4AF37; }
+    .contact-icon { font-size: 2.5rem; margin-bottom: 15px; }
+    .contact-card a { color: #D4AF37; text-decoration: none; font-size: 1.1rem; font-weight: bold; }
     
     footer { text-align: center; padding: 40px 20px; border-top: 1px solid #222; color: #666; }
   </style>
@@ -92,15 +97,27 @@
   </section>
 
   <section class="section" id="contact">
-    <h2>Let's <span class="gold">Talk</span></h2>
-    <div class="contact-box">
-      <h3>Contact QTP Web</h3>
-      <p style="margin:20px 0;">Ready to start your project?</p>
-      <a href="https://wa.me/27837327440">📱 WhatsApp: +27 83 732 7440</a>
-      <a href="mailto:mugdavi@gmail.com">📧 Email: mugdavi@gmail.com</a>
-      <a href="https://wa.me/27837327440" class="cta">
-        <img src="https://img.icons8.com/ios-filled/20/000000/chat.png" style="vertical-align:middle; margin-right:8px;"> Chat Now
-      </a>
+    <h2>Let's <span class="gold">Connect</span></h2>
+    <p style="text-align:center; margin-bottom:40px; color:#ccc;">Ready to build a website that brings customers 24/7?</p>
+    
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">💬</div>
+        <h3>WhatsApp</h3>
+        <p style="margin:15px 0; color:#aaa;">Fastest response</p>
+        <a href="https://wa.me/27837327440">+27 83 732 7440</a>
+        <br><br>
+        <a href="https://wa.me/27837327440" class="cta">Chat Now</a>
+      </div>
+      
+      <div class="contact-card">
+        <div class="contact-icon">📧</div>
+        <h3>Email</h3>
+        <p style="margin:15px 0; color:#aaa;">For detailed quotes</p>
+        <a href="mailto:mugdavi@gmail.com">mugdavi@gmail.com</a>
+        <br><br>
+        <a href="mailto:mugdavi@gmail.com" class="cta cta-outline">Send Email</a>
+      </div>
     </div>
   </section>
 
