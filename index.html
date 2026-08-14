@@ -1,171 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QTP Web | Elite Website Design & Development SA</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #0a0a0a; color: #fff; line-height: 1.6; }
-    .gold { color: #D4AF37; }
-    
-    .hero { 
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1170'); 
-      background-size: cover;
-      background-position: center;
-      padding: 120px 20px; 
-      text-align: center; 
-      border-bottom: 2px solid #D4AF37; 
-    }
-    .hero h1 { font-size: 2.8rem; margin: 20px 0; line-height: 1.2; }
-    .hero p { font-size: 1.2rem; color: #ddd; margin-bottom: 30px; }
-    
-    /* THIS IS THE FIX FOR SIDE-BY-SIDE BUTTONS */
-    .btn-group { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-    .cta { background: #D4AF37; color: #0a0a0a; padding: 16px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; display: inline-block; transition: 0.3s; }
-    .cta:hover { transform: scale(1.05); }
-    .cta-outline { background: transparent; border: 2px solid #D4AF37; color: #D4AF37; }
-    .tag { color: #D4AF37; font-size: 0.9rem; letter-spacing: 2px; }
-    
-    .section { padding: 80px 20px; max-width: 1100px; margin: auto; }
-    .section h2 { text-align:center; margin-bottom:50px; font-size: 2.2rem; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-    .card { background: #111; padding: 35px; border-radius: 15px; border: 1px solid #222; text-align: center; transition: 0.3s; }
-    .card:hover { border-color: #D4AF37; transform: translateY(-5px); }
-    .card img { width: 60px; margin-bottom: 15px; }
-    .card h3 { color: #D4AF37; margin-bottom: 15px; font-size: 1.3rem; }
-    
-    .portfolio-card { background: #111; border-radius: 15px; border: 1px solid #222; overflow: hidden; transition: 0.3s; }
-    .portfolio-card:hover { border-color: #D4AF37; transform: translateY(-5px); }
-    .portfolio-img { width: 100%; height: 220px; object-fit: cover; background: #1a1a1a; }
-    .portfolio-info { padding: 25px; }
-    .portfolio-info h3 { color: #D4AF37; margin-bottom: 10px; }
-    .portfolio-info a { color: #D4AF37; text-decoration: none; font-weight: bold; }
-    
-    .pricing { text-align: center; }
-    .price { font-size: 2.5rem; color: #D4AF37; font-weight: bold; }
-    
-    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 30px; }
-    .contact-card { background: #111; padding: 30px; border-radius: 15px; border: 1px solid #222; text-align: center; }
-    .contact-card:hover { border-color: #D4AF37; }
-    .contact-icon { font-size: 2.5rem; margin-bottom: 15px; }
-    .contact-card a { color: #D4AF37; text-decoration: none; font-size: 1.1rem; font-weight: bold; }
-    
-    footer { text-align: center; padding: 40px 20px; border-top: 1px solid #222; color: #666; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Portfolio | 10 Premium Business Websites</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 font-sans">
 
-  <section class="hero">
-    <p class="tag">PART OF QTP GROUP OF COMPANIES</p>
-    <h1 class="gold">Websites That Turn Clicks Into Customers</h1>
-    <p>Elite, fast, mobile-first websites for businesses in South Africa</p>
-    
-    <div class="btn-group">
-      <a href="https://wa.me/27837327440" class="cta">WhatsApp Us</a>
-      <a href="#portfolio" class="cta cta-outline">View Portfolio</a>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Our <span class="gold">Services</span></h2>
-    <div class="grid">
-      <div class="card">
-        <img src="https://img.icons8.com/ios-filled/100/D4AF37/rocket.png" alt="Speed">
-        <h3>Business Websites</h3>
-        <p>Professional sites that build trust and get leads. Fast delivery.</p>
-      </div>
-      <div class="card">
-        <img src="https://img.icons8.com/ios-filled/100/D4AF37/shopping-cart.png" alt="Store">
-        <h3>E-commerce Stores</h3>
-        <p>Sell online with fast, secure Shopify/WooCommerce stores.</p>
-      </div>
-      <div class="card">
-        <img src="https://img.icons8.com/ios-filled/100/D4AF37/search.png" alt="SEO">
-        <h3>SEO & Speed</h3>
-        <p>Google-optimized sites that load in under 2 seconds.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="portfolio" style="background:#0f0f0f;">
-    <h2>Our <span class="gold">Portfolio</span></h2>
-    <p style="text-align:center; margin-bottom:40px; color:#ccc;">Real websites we've built for real businesses</p>
-    <div class="grid">
-      <div class="portfolio-card">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800" class="portfolio-img" alt="Afrika Tours">
-        <div class="portfolio-info">
-          <h3>Afrika Travel Tours</h3>
-          <p>Tourism website with booking system and tour packages. Mobile-first design.</p>
-          <a href="https://afrika-travel-tours.vercel.app" target="_blank">View Live Site →</a>
+    <!-- Header -->
+    <header class="sticky top-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="text-2xl font-bold">My <span class="text-blue-600">Portfolio</span></a>
+            <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-bold">Hire Me</a>
         </div>
-      </div>
-      <div class="portfolio-card">
-        <img src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?q=80&w=800" class="portfolio-img" alt="Salvation City">
-        <div class="portfolio-info">
-          <h3>Salvation City of All Nations</h3>
-          <p>Church website with events, sermons, and donation system. Clean + modern.</p>
-          <a href="https://salvation-city-of-all-nations.vercel.app" target="_blank">View Live Site →</a>
+    </header>
+
+    <!-- HERO -->
+    <section class="py-24 px-6 text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <h1 class="text-4xl sm:text-6xl font-extrabold mb-4">I Build Websites That Sell</h1>
+        <p class="text-lg mb-8 max-w-2xl mx-auto">10 Premium, Mobile-First Business Websites. Designed to get you WhatsApp leads in 24 hours.</p>
+        <a href="#sites" class="bg-white text-blue-600 font-bold px-8 py-4 rounded-full shadow-xl">View All 10 Sites</a>
+    </section>
+
+    <!-- 10 SITES GRID -->
+    <section id="sites" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">My 10 Portfolio Websites</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- 1. CHURCH -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+                    <img src="https://images.pexels.com/photos/8466132/pexels-photo-8466132.jpeg?auto=compress&w=600" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">1. Salvation City Church</h3>
+                        <p class="text-gray-600 text-sm mb-4">Blue & Gold. Events, sermons, donation buttons.</p>
+                        <a href="https://salvationcity.vercel.app" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm">View Site →</a>
+                    </div>
+                </div>
+
+                <!-- 2. TRAVEL -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+                    <img src="https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&w=600" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">2. Afrka Travel</h3>
+                        <p class="text-gray-600 text-sm mb-4">Orange Adventure. Safari packages + booking.</p>
+                        <a href="https://afrka-travel.vercel.app" target="_blank" class="bg-orange-500 text-white px-4 py-2 rounded-full text-sm">View Site →</a>
+                    </div>
+                </div>
+
+                <!-- 3. LAUNDRY -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+                    <img src="https://images.pexels.com/photos/4239146/pexels-photo-4239146.jpeg?auto=compress&w=600" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">3. FreshFold Laundry</h3>
+                        <p class="text-gray-600 text-sm mb-4">Teal Clean. Wash, dry, iron. Pickup service.</p>
+                        <a href="https://freshfold-laundry.vercel.app" target="_blank" class="bg-teal-500 text-white px-4 py-2 rounded-full text-sm">View Site →</a>
+                    </div>
+                </div>
+
+                <!-- 4. STUDIO -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+                    <img src="https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg?auto=compress&w=600" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">4. SoundWave Studios</h3>
+                        <p class="text-gray-600 text-sm mb-4">Purple/Red. Music recording & mixing.</p>
+                        <a href="https://soundwave-studios.vercel.app" target="_blank" class="bg-purple-600 text-white px-4 py-2 rounded-full text-sm">View Site →</a>
+                    </div>
+                </div>
+
+                <!-- 5. MOVERS -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+                    <img src="https://images.pexels.com/photos/7464635/pexels-photo-7464635.jpeg?auto=compress&w=600" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">5. MoveSmart SA</h3>
+                        <p class="text-gray-600 text-sm mb-4">Blue Trust. Home & office removals.</p>
+                        <a href="https://movesmart-sa.vercel.app" target="_blank" class="bg-blue-700 text-white px-4 py-2 rounded-full text-sm">View Site →</a>
+                    </div>
+                </div>
+
+                <!-- 6. HANDYMAN -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+                    <img src="https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&w=600" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">6. QTP Handyman</h3>
+                        <p class="text-gray-600 text-sm mb-4">Orange/Gray. Plumbing, electrical, repairs.</p>
+                        <a href="https://qtp-web.vercel.app" target="_blank" class="bg-orange-600 text-white px-4 py-2 rounded-full text-sm">View Site →</a>
+                    </div>
+                </div>
+
+                <!-- 7. PLUMBING -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+                    <img src="https://images.pexels.com/photos/5691544/pexels-photo-5691544.jpeg?auto=compress&w=600" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">7. ProFlow Plumbing</h3>
+                        <p class="text-gray-600 text-sm mb-4">Blue/White. 24/7 emergency plumber.</p>
+                        <a href="https://proflow-plumbing.vercel.app" target="_blank" class="bg-blue-500 text-white px-4 py-2 rounded-full text-sm">View Site →</a>
+                    </div>
+                </div>
+
+                <!-- 8. LANDSCAPING -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+                    <img src="https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&w=600" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">8. GreenThumb Landscaping</h3>
+                        <p class="text-gray-600 text-sm mb-4">Green Nature. Garden design & maintenance.</p>
+                        <a href="https://greenthumb-landscaping.vercel.app" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-full text-sm">View Site →</a>
+                    </div>
+                </div>
+
+                <!-- 9. CAR DETAILING -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+                    <img src="https://images.pexels.com/photos/1494972685219-03ae3de1d9ba.jpeg?auto=compress&w=600" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">9. Elite Auto Detailing</h3>
+                        <p class="text-gray-600 text-sm mb-4">Black/Red. Car wash & ceramic coating.</p>
+                        <a href="https://elite-autodetailing.vercel.app" target="_blank" class="bg-red-600 text-white px-4 py-2 rounded-full text-sm">View Site →</a>
+                    </div>
+                </div>
+
+                <!-- 10. HAIR SALON -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+                    <img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&w=600" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">10. Bella's Hair Studio</h3>
+                        <p class="text-gray-600 text-sm mb-4">Pink Glam. Braids, color, styling.</p>
+                        <a href="https://bellas-hair-studio.vercel.app" target="_blank" class="bg-pink-500 text-white px-4 py-2 rounded-full text-sm">View Site →</a>
+                    </div>
+                </div>
+
+            </div>
         </div>
-      </div>
-      <div class="portfolio-card">
-        <img src="https://images.unsplash.com/photo-1556740772-1a741367b93e?q=80&w=800" class="portfolio-img" alt="Coming Soon">
-        <div class="portfolio-info">
-          <h3>Your Business Here</h3>
-          <p>Could this be your website? Let's build something amazing together.</p>
-          <a href="#contact">Get Started →</a>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-20 px-6 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">What Clients Say</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="bg-gray-50 p-6 rounded-2xl shadow">
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Got 12 WhatsApp leads in the first week. The site looks premium and loads fast on mobile."</p>
+                    <p class="font-bold">- Pastor John, Salvation City</p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-2xl shadow">
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Professional, quick turnaround, and the WhatsApp button brings customers directly to me. 10/10"</p>
+                    <p class="font-bold">- Sarah, Bella's Hair Studio</p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-2xl shadow">
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Best investment for my business. Clients now take us seriously because of the website."</p>
+                    <p class="font-bold">- Mike, QTP Handyman</p>
+                </div>
+
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <h2>Simple <span class="gold">Pricing</span></h2>
-    <div class="grid">
-      <div class="card pricing">
-        <h3>Starter</h3>
-        <p class="price">R3,500</p>
-        <p>1 Page Site + Mobile Responsive + Contact Form</p>
-      </div>
-      <div class="card pricing">
-        <h3>Business</h3>
-        <p class="price">R8,500</p>
-        <p>5 Page Site + SEO + WhatsApp Chat + Blog</p>
-      </div>
-      <div class="card pricing">
-        <h3>E-commerce</h3>
-        <p class="price">R15,000</p>
-        <p>Full Online Store + Payments + Product Pages</p>
-      </div>
-    </div>
-  </section>
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 px-6 bg-blue-600 text-white text-center">
+        <h2 class="text-3xl font-bold mb-4">Want a Website Like This?</h2>
+        <p class="mb-8">I build custom sites in 48 hours. Mobile ready + WhatsApp integration.</p>
+        <a href="https://wa.me/27837327440" target="_blank" class="bg-white text-blue-600 font-bold px-8 py-4 rounded-full shadow-xl">
+            <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp Me +27 83 732 7440
+        </a>
+    </section>
 
-  <section class="section" id="contact" style="background:#0f0f0f;">
-    <h2>Let's <span class="gold">Connect</span></h2>
-    <p style="text-align:center; margin-bottom:40px; color:#ccc;">Ready to build a website that brings customers 24/7?</p>
-    <div class="contact-grid">
-      <div class="contact-card">
-        <div class="contact-icon">💬</div>
-        <h3>WhatsApp</h3>
-        <p style="margin:15px 0; color:#aaa;">Fastest response</p>
-        <a href="https://wa.me/27837327440">+27 83 732 7440</a>
-        <br><br>
-        <a href="https://wa.me/27837327440" class="cta">Chat Now</a>
-      </div>
-      <div class="contact-card">
-        <div class="contact-icon">📧</div>
-        <h3>Email</h3>
-        <p style="margin:15px 0; color:#aaa;">For detailed quotes</p>
-        <a href="mailto:mugdavi@gmail.com">mugdavi@gmail.com</a>
-        <br><br>
-        <a href="mailto:mugdavi@gmail.com" class="cta cta-outline">Send Email</a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 QTP Web | Part of QTP Group (Pty) Ltd | Cape Town, SA</p>
-  </footer>
-
+    <footer class="py-6 text-center bg-gray-900 text-gray-400 text-sm">
+        &copy; 2026 My Portfolio. 10 Sites Built.
+    </footer>
 </body>
 </html>
