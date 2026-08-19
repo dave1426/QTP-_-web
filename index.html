@@ -13,6 +13,27 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        function filterSites(category) {
+            const sites = document.querySelectorAll('.site-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-blue-600', 'text-white');
+                btn.classList.add('bg-gray-200', 'text-gray-700');
+            });
+            event.target.classList.add('bg-blue-600', 'text-white');
+            event.target.classList.remove('bg-gray-200', 'text-gray-700');
+
+            sites.forEach(site => {
+                if (category === 'all' || site.dataset.category === category) {
+                    site.style.display = 'block';
+                } else {
+                    site.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
@@ -20,7 +41,6 @@
     <header class="sticky top-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
         <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="#" class="flex items-center gap-2.5 font-bold text-xl group">
-                <!-- Tech Brand Icon -->
                 <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&w=200" alt="QTP WEB Logo" class="w-10 h-10 object-cover rounded-lg shadow-sm border border-blue-200">
                 <span>QTP <span class="text-blue-600">WEB</span></span>
             </a>
@@ -37,16 +57,28 @@
         </div>
     </section>
 
-    <!-- 9 SITES GRID -->
+    <!-- 13 SITES GRID WITH FILTERS -->
     <section id="sites" class="py-20 px-6">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-4">9 Premium Portfolio Websites <span class="text-green-500">✅</span></h2>
-            <p class="text-center text-gray-600 mb-12">Real businesses. Real results. Mobile-first + WhatsApp integrated.</p>
+            <h2 class="text-3xl font-bold text-center mb-4">13 Premium Portfolio Websites <span class="text-green-500">✅</span></h2>
+            <p class="text-center text-gray-600 mb-8">Real businesses. Real results. Mobile-first + WhatsApp integrated.</p>
             
+            <!-- FILTER BUTTONS -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button onclick="filterSites('all')" class="filter-btn bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-bold shadow">All</button>
+                <button onclick="filterSites('jobs')" class="filter-btn bg-gray-200 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow hover:bg-gray-300">Jobs</button>
+                <button onclick="filterSites('trades')" class="filter-btn bg-gray-200 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow hover:bg-gray-300">Trades</button>
+                <button onclick="filterSites('beauty')" class="filter-btn bg-gray-200 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow hover:bg-gray-300">Beauty</button>
+                <button onclick="filterSites('lifestyle')" class="filter-btn bg-gray-200 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow hover:bg-gray-300">Lifestyle</button>
+                <button onclick="filterSites('church')" class="filter-btn bg-gray-200 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow hover:bg-gray-300">Church</button>
+                <button onclick="filterSites('finance')" class="filter-btn bg-gray-200 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow hover:bg-gray-300">Finance</button>
+                <button onclick="filterSites('ecommerce')" class="filter-btn bg-gray-200 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow hover:bg-gray-300">E-Commerce</button>
+            </div>
+
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                <!-- 1. MOVING -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+                <!-- 1. MOVING - TRADES -->
+                <div class="site-card bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition" data-category="trades">
                     <img src="https://images.pexels.com/photos/4481325/pexels-photo-4481325.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Moving Truck">
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2">1. MoveSmart SA</h3>
@@ -55,8 +87,8 @@
                     </div>
                 </div>
 
-                <!-- 2. HANDYMAN -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+                <!-- 2. HANDYMAN - TRADES -->
+                <div class="site-card bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition" data-category="trades">
                     <img src="https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Handyman">
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2">2. QTP Handyman</h3>
@@ -65,8 +97,8 @@
                     </div>
                 </div>
 
-                <!-- 3. PLUMBING -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+                <!-- 3. PLUMBING - TRADES -->
+                <div class="site-card bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition" data-category="trades">
                     <img src="https://images.pexels.com/photos/5691544/pexels-photo-5691544.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Plumbing">
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2">3. Pipe Pro Plumbers</h3>
@@ -75,8 +107,8 @@
                     </div>
                 </div>
 
-                <!-- 4. LANDSCAPING -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+                <!-- 4. LANDSCAPING - TRADES -->
+                <div class="site-card bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition" data-category="trades">
                     <img src="https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Landscaping">
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2">4. GreenThumb Landscaping</h3>
@@ -85,8 +117,8 @@
                     </div>
                 </div>
 
-                <!-- 5. CAR DETAILING -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+                <!-- 5. CAR DETAILING - LIFESTYLE -->
+                <div class="site-card bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition" data-category="lifestyle">
                     <img src="https://images.pexels.com/photos/2126476/pexels-photo-2126476.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Car Detailing">
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2">5. Elite Auto Detailing</h3>
@@ -95,8 +127,8 @@
                     </div>
                 </div>
 
-                <!-- 6. BEAUTY SALON -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+                <!-- 6. BEAUTY SALON - BEAUTY -->
+                <div class="site-card bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition" data-category="beauty">
                     <img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Beauty Salon">
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2">6. Bella's Beauty Salon</h3>
@@ -105,8 +137,8 @@
                     </div>
                 </div>
 
-                <!-- 7. CLEANING -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+                <!-- 7. CLEANING - TRADES -->
+                <div class="site-card bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition" data-category="trades">
                     <img src="https://images.pexels.com/photos/4239146/pexels-photo-4239146.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Cleaning">
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2">7. FreshFold Cleaning</h3>
@@ -115,8 +147,8 @@
                     </div>
                 </div>
 
-                <!-- 8. TRAVEL -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+                <!-- 8. TRAVEL - LIFESTYLE -->
+                <div class="site-card bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition" data-category="lifestyle">
                     <img src="https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Travel">
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2">8. Afrika Travel & Tours</h3>
@@ -125,13 +157,53 @@
                     </div>
                 </div>
 
-                <!-- 9. MUSIC STUDIO -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+                <!-- 9. MUSIC STUDIO - LIFESTYLE -->
+                <div class="site-card bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition" data-category="lifestyle">
                     <img src="https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Music Studio">
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2">9. SoundWave Music Studio</h3>
                         <p class="text-gray-600 text-sm mb-4">Purple/Red. Recording, mixing, mastering.</p>
                         <a href="https://portfolio-musicstudio.vercel.app/" target="_blank" class="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block">View Site →</a>
+                    </div>
+                </div>
+
+                <!-- 10. DAILY GIGS CAPETOWN - JOBS -->
+                <div class="site-card bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition" data-category="jobs">
+                    <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Jobs">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">10. Daily Gigs Cape Town</h3>
+                        <p class="text-gray-600 text-sm mb-4">Blue/White. All Jobs: Waitress, Admin, Cleaning, Construction.</p>
+                        <a href="https://qtp-daily-gigs.vercel.app/" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block">View Site →</a>
+                    </div>
+                </div>
+
+                <!-- 11. STRATIQ - FINANCE -->
+                <div class="site-card bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition" data-category="finance">
+                    <img src="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Forex Trading">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">11. StratIQ - Forex Automation</h3>
+                        <p class="text-gray-600 text-sm mb-4">Dark/Navy. Forex trading strategy automation platform.</p>
+                        <a href="https://qtp-strat-iq.vercel.app/" target="_blank" class="bg-gray-900 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block">View Site →</a>
+                    </div>
+                </div>
+
+                <!-- 12. SALVATION CITY - CHURCH -->
+                <div class="site-card bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition" data-category="church">
+                    <img src="https://images.pexels.com/photos/1615776/pexels-photo-1615776.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Church">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">12. Salvation City Of All Nations</h3>
+                        <p class="text-gray-600 text-sm mb-4">Gold/White. Ministry, sermons, events, donations.</p>
+                        <a href="https://salvation-city-qtp1.vercel.app/" target="_blank" class="bg-yellow-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block">View Site →</a>
+                    </div>
+                </div>
+
+                <!-- 13. NOMA FASHION - ECOMMERCE -->
+                <div class="site-card bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition" data-category="ecommerce">
+                    <img src="https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Fashion">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">13. NOMA Fashion & Accessories</h3>
+                        <p class="text-gray-600 text-sm mb-4">Black/Rose. Boutique, clothing, accessories + WhatsApp orders.</p>
+                        <a href="https://noma-fashions-and-accessories.vercel.app/" target="_blank" class="bg-rose-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block">View Site →</a>
                     </div>
                 </div>
 
@@ -228,4 +300,4 @@
         &copy; 2026 QTP WEB. Premium Sites Built.
     </footer>
 </body>
-</html>
+    </html>
