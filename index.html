@@ -51,18 +51,18 @@
         </div>
     </header>
 
-    <!-- HERO WITH BACKGROUND VIDEO & FLOATING GLASS CARD -->
+    <!-- HERO WITH LIGHTER BACKGROUND VIDEO & FLOATING GLASS CARD -->
     <section class="py-28 px-6 text-center text-white relative overflow-hidden flex items-center justify-center min-h-[600px]">
-        <!-- Background Video -->
+        <!-- Background Video (Lighter opacity) -->
         <div class="absolute inset-0 w-full h-full overflow-hidden z-0">
-            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-40">
+            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-60">
                 <source src="https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4" type="video/mp4">
             </video>
-            <div class="absolute inset-0 bg-slate-950/70"></div>
+            <div class="absolute inset-0 bg-slate-950/40"></div>
         </div>
 
         <!-- Floating Glass Card for Hero Content -->
-        <div class="max-w-3xl mx-auto flex flex-col items-center relative z-10 backdrop-blur-md bg-slate-900/60 p-8 sm:p-12 rounded-3xl border border-indigo-500/30 shadow-2xl shadow-indigo-950/50">
+        <div class="max-w-3xl mx-auto flex flex-col items-center relative z-10 backdrop-blur-md bg-slate-900/70 p-8 sm:p-12 rounded-3xl border border-indigo-500/30 shadow-2xl shadow-indigo-950/50">
             <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs font-semibold px-4 py-1.5 rounded-full mb-6 flex items-center gap-2 backdrop-blur-sm shadow-inner">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Logo Design, WhatsApp & Social Media Integration
             </span>
@@ -91,7 +91,7 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Service 1: Custom Logo & Branding (New) -->
+                <!-- Service 1: Custom Logo & Branding -->
                 <div class="bg-white p-8 rounded-3xl border border-indigo-100 shadow-xl shadow-indigo-900/5 hover:-translate-y-1.5 hover:shadow-2xl hover:border-indigo-300 transition-all duration-300 group">
                     <div class="w-14 h-14 bg-gradient-to-br from-indigo-500 to-purple-600 text-white rounded-2xl flex items-center justify-center text-xl font-bold mb-6 shadow-lg shadow-indigo-500/30 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-pen-nib"></i>
@@ -325,68 +325,75 @@
         </div>
     </section>
 
-    <!-- PRICING -->
-    <section id="pricing" class="py-20 px-6 bg-slate-50">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-4 text-slate-900">Simple, Transparent Pricing</h2>
-            <p class="text-center text-slate-600 mb-12">48 Hour Delivery. Mobile Ready. Logo Design & WhatsApp/Social Integration Included.</p>
+    <!-- VIBRANT PRICING SECTION -->
+    <section id="pricing" class="py-24 px-6 bg-gradient-to-br from-indigo-950 via-slate-900 to-blue-950 text-white relative overflow-hidden">
+        <!-- Glowing background decoration blur elements -->
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-emerald-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="bg-indigo-500/20 text-indigo-300 border border-indigo-500/40 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">Investment Plans</span>
+                <h2 class="text-4xl font-extrabold mt-3 mb-4 tracking-tight text-white">Simple, Transparent Pricing</h2>
+                <p class="text-indigo-200">48 Hour Delivery. Mobile Ready. Logo Design & WhatsApp/Social Integration Included.</p>
+            </div>
             
             <div class="grid md:grid-cols-3 gap-8 items-center">
                 <!-- BASIC -->
-                <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-200">
-                    <h3 class="text-xl font-bold mb-2 text-slate-900">Starter</h3>
-                    <p class="text-slate-600 text-sm mb-6">Perfect for small businesses</p>
-                    <p class="text-4xl font-extrabold mb-6 text-slate-900">R1,499<span class="text-lg font-normal text-slate-500">/once</span></p>
-                    <ul class="space-y-3 mb-8 text-sm text-slate-700">
-                        <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Custom Logo Design</li>
-                        <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> 1 Page Website</li>
-                        <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Mobile Responsive & WhatsApp</li>
+                <div class="bg-slate-900/80 backdrop-blur-xl p-8 rounded-3xl shadow-xl border border-indigo-500/20 hover:border-indigo-500/50 transition-all duration-300">
+                    <h3 class="text-xl font-bold mb-2 text-white">Starter</h3>
+                    <p class="text-slate-400 text-sm mb-6">Perfect for small businesses</p>
+                    <p class="text-4xl font-extrabold mb-6 text-white">R1,499<span class="text-lg font-normal text-slate-400">/once</span></p>
+                    <ul class="space-y-3 mb-8 text-sm text-slate-300">
+                        <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Custom Logo Design</li>
+                        <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> 1 Page Website</li>
+                        <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Mobile Responsive & WhatsApp</li>
                     </ul>
-                    <a href="https://wa.me/27837327440?text=Hi,%20I%20want%20the%20Starter%20package%20with%20Logo%20Design" target="_blank" class="w-full bg-slate-100 text-slate-800 font-bold py-3 rounded-full block text-center hover:bg-slate-200 hover:scale-[1.02] transition-all">Get Started</a>
+                    <a href="https://wa.me/27837327440?text=Hi,%20I%20want%20the%20Starter%20package%20with%20Logo%20Design" target="_blank" class="w-full bg-slate-800 text-white font-bold py-3.5 rounded-full block text-center hover:bg-slate-700 hover:scale-[1.02] transition-all border border-slate-700">Get Started</a>
                 </div>
 
-                <!-- PRO - HIGHLIGHTED -->
-                <div class="bg-slate-900 text-white p-8 rounded-2xl shadow-2xl border-2 border-indigo-500 relative transform md:-translate-y-2">
-                    <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">Most Popular</span>
-                    <h3 class="text-xl font-bold mb-2">Business Pro</h3>
-                    <p class="text-indigo-200 text-sm mb-6">Best value for growth</p>
-                    <p class="text-4xl font-extrabold mb-6">R2,999<span class="text-lg font-normal text-indigo-200">/once</span></p>
-                    <ul class="space-y-3 mb-8 text-sm text-slate-200">
+                <!-- PRO - VIBRANT HIGHLIGHTED -->
+                <div class="bg-gradient-to-b from-indigo-900 to-slate-900 text-white p-8 rounded-3xl shadow-2xl border-2 border-emerald-400 relative transform md:-translate-y-4">
+                    <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-emerald-400 to-teal-500 text-slate-950 font-extrabold text-xs px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">Most Popular 🔥</span>
+                    <h3 class="text-2xl font-bold mb-2 text-white">Business Pro</h3>
+                    <p class="text-emerald-300 text-sm mb-6">Best value for growth</p>
+                    <p class="text-5xl font-extrabold mb-6 text-white">R2,999<span class="text-lg font-normal text-indigo-200">/once</span></p>
+                    <ul class="space-y-3 mb-8 text-sm text-slate-100">
                         <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Premium Logo & Brand Kit</li>
                         <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> 3-5 Page Website</li>
                         <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> WhatsApp + TikTok/YouTube Sync</li>
                     </ul>
-                    <a href="https://wa.me/27837327440?text=Hi,%20I%20want%20the%20Business%20Pro%20package" target="_blank" class="w-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-bold py-3 rounded-full block text-center shadow-lg shadow-emerald-500/30 hover:scale-105 transition-all">Get Pro Now 🚀</a>
+                    <a href="https://wa.me/27837327440?text=Hi,%20I%20want%20the%20Business%20Pro%20package" target="_blank" class="w-full bg-gradient-to-r from-emerald-400 to-teal-500 text-slate-950 font-extrabold py-4 rounded-full block text-center shadow-xl shadow-emerald-500/30 hover:scale-105 transition-all">Get Pro Now 🚀</a>
                 </div>
 
                 <!-- PREMIUM -->
-                <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-200">
-                    <h3 class="text-xl font-bold mb-2 text-slate-900">E-Commerce</h3>
-                    <p class="text-slate-600 text-sm mb-6">For selling online</p>
-                    <p class="text-4xl font-extrabold mb-6 text-slate-900">R4,999<span class="text-lg font-normal text-slate-500">/once</span></p>
-                    <ul class="space-y-3 mb-8 text-sm text-slate-700">
-                        <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Full Brand Identity & Logo Suite</li>
-                        <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Unlimited Pages & Product Store</li>
-                        <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Full Social & WhatsApp Integration</li>
+                <div class="bg-slate-900/80 backdrop-blur-xl p-8 rounded-3xl shadow-xl border border-indigo-500/20 hover:border-indigo-500/50 transition-all duration-300">
+                    <h3 class="text-xl font-bold mb-2 text-white">E-Commerce</h3>
+                    <p class="text-slate-400 text-sm mb-6">For selling online</p>
+                    <p class="text-4xl font-extrabold mb-6 text-white">R4,999<span class="text-lg font-normal text-slate-400">/once</span></p>
+                    <ul class="space-y-3 mb-8 text-sm text-slate-300">
+                        <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Full Brand Identity & Logo Suite</li>
+                        <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Unlimited Pages & Product Store</li>
+                        <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Full Social & WhatsApp Integration</li>
                     </ul>
-                    <a href="https://wa.me/27837327440?text=Hi,%20I%20want%20the%20E-Commerce%20package" target="_blank" class="w-full bg-slate-100 text-slate-800 font-bold py-3 rounded-full block text-center hover:bg-slate-200 hover:scale-[1.02] transition-all">Get Premium</a>
+                    <a href="https://wa.me/27837327440?text=Hi,%20I%20want%20the%20E-Commerce%20package" target="_blank" class="w-full bg-slate-800 text-white font-bold py-3.5 rounded-full block text-center hover:bg-slate-700 hover:scale-[1.02] transition-all border border-slate-700">Get Premium</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT / WHATSAPP CALL TO ACTION -->
-    <section id="contact" class="py-20 px-6 bg-gradient-to-r from-indigo-900 to-slate-900 text-white text-center">
+    <!-- CONTACT / WHATSAPP CALL TO ACTION (FIXED BUTTON WRAP) -->
+    <section id="contact" class="py-20 px-6 bg-gradient-to-r from-indigo-950 to-slate-950 text-white text-center">
         <div class="max-w-3xl mx-auto flex flex-col items-center">
             <h2 class="text-3xl font-bold mb-4">Ready to Build Your Brand & Website?</h2>
             <p class="text-slate-300 mb-8">I create professional custom logos and websites in 48 hours with full WhatsApp, TikTok, YouTube, Facebook, and Instagram integration.</p>
             
-            <a href="https://wa.me/27837327440?text=Hi,%20I%20want%20a%20logo%20and%20website%20built." target="_blank" class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-bold text-lg px-10 py-5 rounded-full shadow-2xl shadow-emerald-500/50 hover:scale-105 hover:from-emerald-400 hover:to-emerald-500 transition-all duration-300 inline-flex items-center gap-3 border border-emerald-400/40 relative">
+            <a href="https://wa.me/27837327440?text=Hi,%20I%20want%20a%20logo%20and%20website%20built." target="_blank" class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-bold text-base sm:text-lg px-8 py-4 sm:px-10 sm:py-5 rounded-full shadow-2xl shadow-emerald-500/50 hover:scale-105 hover:from-emerald-400 hover:to-emerald-500 transition-all duration-300 inline-flex items-center gap-3 border border-emerald-400/40 relative whitespace-nowrap">
                 <span class="absolute -top-1 -right-1 flex h-3.5 w-3.5">
                   <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
                   <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-white"></span>
                 </span>
-                <i class="fa-brands fa-whatsapp text-3xl"></i> WhatsApp Me +27 83 732 7440
+                <i class="fa-brands fa-whatsapp text-2xl sm:text-3xl"></i> <span>WhatsApp Me +27 83 732 7440</span>
             </a>
         </div>
     </section>
