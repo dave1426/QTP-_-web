@@ -23,10 +23,10 @@
             
             buttons.forEach(btn => {
                 btn.classList.remove('bg-indigo-600', 'text-white', 'shadow-md');
-                btn.classList.add('bg-gray-100', 'text-gray-700');
+                btn.classList.add('bg-slate-800', 'text-slate-300', 'border', 'border-slate-700');
             });
-            event.target.classList.add('bg-indigo-600', 'text-white', 'shadow-md');
-            event.target.classList.remove('bg-gray-100', 'text-gray-700');
+            event.target.classList.add('bg-indigo-600', 'text-white', 'shadow-md', 'border-transparent');
+            event.target.classList.remove('bg-slate-800', 'text-slate-300', 'border');
 
             sites.forEach(site => {
                 if (category === 'all' || site.dataset.category === category) {
@@ -38,10 +38,10 @@
         }
     </script>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans">
+<body class="bg-slate-950 text-slate-100 font-sans">
 
     <!-- Header -->
-    <header class="sticky top-0 w-full bg-slate-900/95 backdrop-blur-md shadow-md z-50 text-white">
+    <header class="sticky top-0 w-full bg-slate-900/95 backdrop-blur-md shadow-md z-50 text-white border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="#" class="flex items-center gap-2.5 font-bold text-xl group">
                 <img src="IMG-20260821-WA6744.jpg" alt="QTP WEB Logo" class="w-9 h-9 rounded-full object-cover shadow border border-indigo-500/30">
@@ -51,23 +51,23 @@
         </div>
     </header>
 
-    <!-- HERO WITH LIGHTER BACKGROUND VIDEO & FLOATING GLASS CARD -->
+    <!-- HERO SECTION (DARK) -->
     <section class="py-28 px-6 text-center text-white relative overflow-hidden flex items-center justify-center min-h-[600px]">
-        <!-- Background Video (Lighter opacity) -->
+        <!-- Background Video -->
         <div class="absolute inset-0 w-full h-full overflow-hidden z-0">
             <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-60">
                 <source src="https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4" type="video/mp4">
             </video>
-            <div class="absolute inset-0 bg-slate-950/40"></div>
+            <div class="absolute inset-0 bg-slate-950/50"></div>
         </div>
 
         <!-- Floating Glass Card for Hero Content -->
-        <div class="max-w-3xl mx-auto flex flex-col items-center relative z-10 backdrop-blur-md bg-slate-900/70 p-8 sm:p-12 rounded-3xl border border-indigo-500/30 shadow-2xl shadow-indigo-950/50">
+        <div class="max-w-3xl mx-auto flex flex-col items-center relative z-10 backdrop-blur-md bg-slate-900/80 p-8 sm:p-12 rounded-3xl border border-indigo-500/30 shadow-2xl shadow-indigo-950/50">
             <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs font-semibold px-4 py-1.5 rounded-full mb-6 flex items-center gap-2 backdrop-blur-sm shadow-inner">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Logo Design, WhatsApp & Social Media Integration
             </span>
             <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 tracking-tight text-white drop-shadow-md">I Build Websites & Brands That Sell</h1>
-            <p class="text-lg text-slate-200 mb-8 max-w-2xl mx-auto drop-shadow">Professional Logo Design, Mobile-First Websites connected directly to your WhatsApp, TikTok, YouTube, Facebook & Instagram.</p>
+            <p class="text-lg text-slate-300 mb-8 max-w-2xl mx-auto drop-shadow">Professional Logo Design, Mobile-First Websites connected directly to your WhatsApp, TikTok, YouTube, Facebook & Instagram.</p>
             
             <!-- STAND-OUT PULSING HERO BUTTON -->
             <a href="#services" class="bg-gradient-to-r from-blue-600 via-indigo-600 to-indigo-700 text-white font-bold px-8 py-4 rounded-full shadow-2xl shadow-indigo-500/50 hover:scale-105 transition-all duration-300 border border-indigo-400/40 relative">
@@ -80,19 +80,18 @@
         </div>
     </section>
 
-    <!-- SERVICES / WHAT WE DO SECTION (FLOATING CARDS) -->
-    <section id="services" class="py-24 px-6 bg-slate-100/60 border-y border-slate-200/60">
+    <!-- SERVICES / WHAT WE DO SECTION (LIGHT CLEAN) -->
+    <section id="services" class="py-24 px-6 bg-white text-slate-900">
         <div class="max-w-7xl mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-indigo-600 font-bold text-sm tracking-wider uppercase bg-indigo-50 px-3 py-1 rounded-full border border-indigo-100">Full-Stack Capabilities</span>
-                <h2 class="text-3xl font-bold mt-3 mb-4 text-slate-900">What QTP WEB Can Build For You</h2>
+                <h2 class="text-3xl font-extrabold mt-3 mb-4 text-slate-900">What QTP WEB Can Build For You</h2>
                 <p class="text-slate-600">From custom brand logos to high-performance web solutions fully synced with your social ecosystem and lead generation channels.</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Service 1: Custom Logo & Branding -->
-                <div class="bg-white p-8 rounded-3xl border border-indigo-100 shadow-xl shadow-indigo-900/5 hover:-translate-y-1.5 hover:shadow-2xl hover:border-indigo-300 transition-all duration-300 group">
+                <!-- Service 1 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200/80 shadow-xl shadow-slate-200/50 hover:-translate-y-1.5 hover:shadow-2xl hover:border-indigo-300 transition-all duration-300 group">
                     <div class="w-14 h-14 bg-gradient-to-br from-indigo-500 to-purple-600 text-white rounded-2xl flex items-center justify-center text-xl font-bold mb-6 shadow-lg shadow-indigo-500/30 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-pen-nib"></i>
                     </div>
@@ -100,8 +99,8 @@
                     <p class="text-slate-600 text-sm leading-relaxed">Unique, modern logo designs and complete visual identities that make your business stand out on your website and social pages.</p>
                 </div>
 
-                <!-- Service 2: Landing Pages -->
-                <div class="bg-white p-8 rounded-3xl border border-blue-100 shadow-xl shadow-blue-900/5 hover:-translate-y-1.5 hover:shadow-2xl hover:border-blue-300 transition-all duration-300 group">
+                <!-- Service 2 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200/80 shadow-xl shadow-slate-200/50 hover:-translate-y-1.5 hover:shadow-2xl hover:border-blue-300 transition-all duration-300 group">
                     <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-600 text-white rounded-2xl flex items-center justify-center text-xl font-bold mb-6 shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-bolt"></i>
                     </div>
@@ -109,8 +108,8 @@
                     <p class="text-slate-600 text-sm leading-relaxed">Lightning-fast single-page websites optimized to convert your social media traffic (TikTok, Instagram, Facebook) into instant customers.</p>
                 </div>
 
-                <!-- Service 3: Multi-Page -->
-                <div class="bg-white p-8 rounded-3xl border border-sky-100 shadow-xl shadow-sky-900/5 hover:-translate-y-1.5 hover:shadow-2xl hover:border-sky-300 transition-all duration-300 group">
+                <!-- Service 3 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200/80 shadow-xl shadow-slate-200/50 hover:-translate-y-1.5 hover:shadow-2xl hover:border-sky-300 transition-all duration-300 group">
                     <div class="w-14 h-14 bg-gradient-to-br from-sky-500 to-blue-600 text-white rounded-2xl flex items-center justify-center text-xl font-bold mb-6 shadow-lg shadow-sky-500/30 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-briefcase"></i>
                     </div>
@@ -118,8 +117,8 @@
                     <p class="text-slate-600 text-sm leading-relaxed">Professional multi-page platforms for service providers, trades, law firms, and consultants to establish absolute market authority.</p>
                 </div>
 
-                <!-- Service 4: E-Commerce -->
-                <div class="bg-white p-8 rounded-3xl border border-emerald-100 shadow-xl shadow-emerald-900/5 hover:-translate-y-1.5 hover:shadow-2xl hover:border-emerald-300 transition-all duration-300 group">
+                <!-- Service 4 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200/80 shadow-xl shadow-slate-200/50 hover:-translate-y-1.5 hover:shadow-2xl hover:border-emerald-300 transition-all duration-300 group">
                     <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 text-white rounded-2xl flex items-center justify-center text-xl font-bold mb-6 shadow-lg shadow-emerald-500/30 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </div>
@@ -127,8 +126,8 @@
                     <p class="text-slate-600 text-sm leading-relaxed">Product catalogs and storefronts equipped with secure layouts and direct WhatsApp order integrations to streamline online sales.</p>
                 </div>
 
-                <!-- Service 5: Mobile-First -->
-                <div class="bg-white p-8 rounded-3xl border border-purple-100 shadow-xl shadow-purple-900/5 hover:-translate-y-1.5 hover:shadow-2xl hover:border-purple-300 transition-all duration-300 group">
+                <!-- Service 5 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200/80 shadow-xl shadow-slate-200/50 hover:-translate-y-1.5 hover:shadow-2xl hover:border-purple-300 transition-all duration-300 group">
                     <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-fuchsia-600 text-white rounded-2xl flex items-center justify-center text-xl font-bold mb-6 shadow-lg shadow-purple-500/30 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-mobile-screen-button"></i>
                     </div>
@@ -136,196 +135,203 @@
                     <p class="text-slate-600 text-sm leading-relaxed">Because your audience visits from phone apps like TikTok and Instagram, every pixel is rigorously built to look flawless on mobile.</p>
                 </div>
 
-                <!-- Service 6: Omnichannel Social & WhatsApp -->
-                <div class="bg-white p-8 rounded-3xl border border-pink-100 shadow-xl shadow-pink-900/5 hover:-translate-y-1.5 hover:shadow-2xl hover:border-pink-300 transition-all duration-300 group">
+                <!-- Service 6 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200/80 shadow-xl shadow-slate-200/50 hover:-translate-y-1.5 hover:shadow-2xl hover:border-pink-300 transition-all duration-300 group">
                     <div class="w-14 h-14 bg-gradient-to-br from-pink-500 via-purple-600 to-orange-500 text-white rounded-2xl flex items-center justify-center text-xl font-bold mb-6 shadow-lg shadow-pink-500/30 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-share-nodes"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-slate-900">WhatsApp & Social Sync</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">Seamless integration for WhatsApp chats, Facebook pages, Instagram feeds, TikTok clips, and YouTube videos directly on your site.</p>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- 13 SITES GRID WITH FILTERS -->
-    <section id="sites" class="py-20 px-6">
+    <!-- 13 SITES GALLERY (DARK CINEMATIC BACKGROUND) -->
+    <section id="sites" class="py-24 px-6 bg-slate-900 text-white border-y border-slate-800">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-4 text-slate-900">13 Premium Portfolio Websites <span class="text-emerald-500">✅</span></h2>
-            <p class="text-center text-slate-600 mb-8">Real businesses. Real results. Custom Branding + Mobile-first + Social & WhatsApp integrated.</p>
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">Live Portfolio</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-3 mb-4 text-white">13 Premium Portfolio Websites <span class="text-emerald-400">✅</span></h2>
+                <p class="text-slate-400">Real businesses. Real results. Custom Branding + Mobile-first + Social & WhatsApp integrated.</p>
+            </div>
             
             <!-- FILTER BUTTONS -->
             <div class="flex flex-wrap justify-center gap-3 mb-12">
-                <button onclick="filterSites('all')" class="filter-btn bg-indigo-600 text-white px-5 py-2 rounded-full text-sm font-bold shadow-md">All</button>
-                <button onclick="filterSites('jobs')" class="filter-btn bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow-sm hover:bg-gray-200 transition">Jobs</button>
-                <button onclick="filterSites('trades')" class="filter-btn bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow-sm hover:bg-gray-200 transition">Trades</button>
-                <button onclick="filterSites('beauty')" class="filter-btn bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow-sm hover:bg-gray-200 transition">Beauty</button>
-                <button onclick="filterSites('lifestyle')" class="filter-btn bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow-sm hover:bg-gray-200 transition">Lifestyle</button>
-                <button onclick="filterSites('church')" class="filter-btn bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow-sm hover:bg-gray-200 transition">Church</button>
-                <button onclick="filterSites('finance')" class="filter-btn bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow-sm hover:bg-gray-200 transition">Finance</button>
-                <button onclick="filterSites('ecommerce')" class="filter-btn bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow-sm hover:bg-gray-200 transition">E-Commerce</button>
+                <button onclick="filterSites('all')" class="filter-btn bg-indigo-600 text-white px-5 py-2 rounded-full text-sm font-bold shadow-md transition-all">All</button>
+                <button onclick="filterSites('jobs')" class="filter-btn bg-slate-800 text-slate-300 border border-slate-700 px-5 py-2 rounded-full text-sm font-bold shadow-sm hover:bg-slate-700 hover:text-white transition-all">Jobs</button>
+                <button onclick="filterSites('trades')" class="filter-btn bg-slate-800 text-slate-300 border border-slate-700 px-5 py-2 rounded-full text-sm font-bold shadow-sm hover:bg-slate-700 hover:text-white transition-all">Trades</button>
+                <button onclick="filterSites('beauty')" class="filter-btn bg-slate-800 text-slate-300 border border-slate-700 px-5 py-2 rounded-full text-sm font-bold shadow-sm hover:bg-slate-700 hover:text-white transition-all">Beauty</button>
+                <button onclick="filterSites('lifestyle')" class="filter-btn bg-slate-800 text-slate-300 border border-slate-700 px-5 py-2 rounded-full text-sm font-bold shadow-sm hover:bg-slate-700 hover:text-white transition-all">Lifestyle</button>
+                <button onclick="filterSites('church')" class="filter-btn bg-slate-800 text-slate-300 border border-slate-700 px-5 py-2 rounded-full text-sm font-bold shadow-sm hover:bg-slate-700 hover:text-white transition-all">Church</button>
+                <button onclick="filterSites('finance')" class="filter-btn bg-slate-800 text-slate-300 border border-slate-700 px-5 py-2 rounded-full text-sm font-bold shadow-sm hover:bg-slate-700 hover:text-white transition-all">Finance</button>
+                <button onclick="filterSites('ecommerce')" class="filter-btn bg-slate-800 text-slate-300 border border-slate-700 px-5 py-2 rounded-full text-sm font-bold shadow-sm hover:bg-slate-700 hover:text-white transition-all">E-Commerce</button>
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- 1. MOVING -->
-                <div class="site-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300" data-category="trades">
-                    <img src="https://images.pexels.com/photos/4481325/pexels-photo-4481325.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Moving Truck">
+                <div class="site-card bg-slate-950/80 rounded-2xl shadow-xl border border-slate-800 overflow-hidden hover:border-indigo-500/50 hover:-translate-y-1 transition duration-300" data-category="trades">
+                    <img src="https://images.pexels.com/photos/4481325/pexels-photo-4481325.jpeg?auto=compress&w=600" class="w-full h-48 object-cover opacity-90" alt="Moving Truck">
                     <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2 text-slate-900">1. MoveSmart SA</h3>
-                        <p class="text-slate-600 text-sm mb-4">Reliable home & office removals.</p>
-                        <a href="https://portfolio-moving.vercel.app" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-blue-700 hover:scale-105 transition-all">View Site →</a>
+                        <h3 class="font-bold text-xl mb-2 text-white">1. MoveSmart SA</h3>
+                        <p class="text-slate-400 text-sm mb-4">Reliable home & office removals.</p>
+                        <a href="https://portfolio-moving.vercel.app" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-blue-500 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
 
                 <!-- 2. HANDYMAN -->
-                <div class="site-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300" data-category="trades">
-                    <img src="https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Handyman">
+                <div class="site-card bg-slate-950/80 rounded-2xl shadow-xl border border-slate-800 overflow-hidden hover:border-indigo-500/50 hover:-translate-y-1 transition duration-300" data-category="trades">
+                    <img src="https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&w=600" class="w-full h-48 object-cover opacity-90" alt="Handyman">
                     <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2 text-slate-900">2. QTP Handyman</h3>
-                        <p class="text-slate-600 text-sm mb-4">Plumbing, electrical, and general repairs.</p>
-                        <a href="https://portfolio-handyman-site-27q3.vercel.app" target="_blank" class="bg-amber-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-amber-700 hover:scale-105 transition-all">View Site →</a>
+                        <h3 class="font-bold text-xl mb-2 text-white">2. QTP Handyman</h3>
+                        <p class="text-slate-400 text-sm mb-4">Plumbing, electrical, and general repairs.</p>
+                        <a href="https://portfolio-handyman-site-27q3.vercel.app" target="_blank" class="bg-amber-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-amber-500 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
 
                 <!-- 3. PLUMBING -->
-                <div class="site-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300" data-category="trades">
-                    <img src="https://images.pexels.com/photos/5691544/pexels-photo-5691544.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Plumbing">
+                <div class="site-card bg-slate-950/80 rounded-2xl shadow-xl border border-slate-800 overflow-hidden hover:border-indigo-500/50 hover:-translate-y-1 transition duration-300" data-category="trades">
+                    <img src="https://images.pexels.com/photos/5691544/pexels-photo-5691544.jpeg?auto=compress&w=600" class="w-full h-48 object-cover opacity-90" alt="Plumbing">
                     <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2 text-slate-900">3. Pipe Pro Plumbers</h3>
-                        <p class="text-slate-600 text-sm mb-4">24/7 emergency plumber services.</p>
-                        <a href="https://portfolio-plumping-site-qw77.vercel.app" target="_blank" class="bg-sky-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-sky-700 hover:scale-105 transition-all">View Site →</a>
+                        <h3 class="font-bold text-xl mb-2 text-white">3. Pipe Pro Plumbers</h3>
+                        <p class="text-slate-400 text-sm mb-4">24/7 emergency plumber services.</p>
+                        <a href="https://portfolio-plumping-site-qw77.vercel.app" target="_blank" class="bg-sky-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-sky-500 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
 
                 <!-- 4. LANDSCAPING -->
-                <div class="site-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300" data-category="trades">
-                    <img src="https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Landscaping">
+                <div class="site-card bg-slate-950/80 rounded-2xl shadow-xl border border-slate-800 overflow-hidden hover:border-indigo-500/50 hover:-translate-y-1 transition duration-300" data-category="trades">
+                    <img src="https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&w=600" class="w-full h-48 object-cover opacity-90" alt="Landscaping">
                     <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2 text-slate-900">4. GreenThumb Landscaping</h3>
-                        <p class="text-slate-600 text-sm mb-4">Garden design & maintenance.</p>
-                        <a href="https://portfolio-landscaping-m6zq.vercel.app" target="_blank" class="bg-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-emerald-700 hover:scale-105 transition-all">View Site →</a>
+                        <h3 class="font-bold text-xl mb-2 text-white">4. GreenThumb Landscaping</h3>
+                        <p class="text-slate-400 text-sm mb-4">Garden design & maintenance.</p>
+                        <a href="https://portfolio-landscaping-m6zq.vercel.app" target="_blank" class="bg-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-emerald-500 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
 
                 <!-- 5. CAR DETAILING -->
-                <div class="site-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300" data-category="lifestyle">
-                    <img src="https://images.pexels.com/photos/2126476/pexels-photo-2126476.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Car Detailing">
+                <div class="site-card bg-slate-950/80 rounded-2xl shadow-xl border border-slate-800 overflow-hidden hover:border-indigo-500/50 hover:-translate-y-1 transition duration-300" data-category="lifestyle">
+                    <img src="https://images.pexels.com/photos/2126476/pexels-photo-2126476.jpeg?auto=compress&w=600" class="w-full h-48 object-cover opacity-90" alt="Car Detailing">
                     <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2 text-slate-900">5. Elite Auto Detailing</h3>
-                        <p class="text-slate-600 text-sm mb-4">Car wash & ceramic coating.</p>
-                        <a href="https://portfolio-car-detailing-c4in.vercel.app" target="_blank" class="bg-rose-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-rose-700 hover:scale-105 transition-all">View Site →</a>
+                        <h3 class="font-bold text-xl mb-2 text-white">5. Elite Auto Detailing</h3>
+                        <p class="text-slate-400 text-sm mb-4">Car wash & ceramic coating.</p>
+                        <a href="https://portfolio-car-detailing-c4in.vercel.app" target="_blank" class="bg-rose-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-rose-500 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
 
                 <!-- 6. BEAUTY SALON -->
-                <div class="site-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300" data-category="beauty">
-                    <img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Beauty Salon">
+                <div class="site-card bg-slate-950/80 rounded-2xl shadow-xl border border-slate-800 overflow-hidden hover:border-indigo-500/50 hover:-translate-y-1 transition duration-300" data-category="beauty">
+                    <img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&w=600" class="w-full h-48 object-cover opacity-90" alt="Beauty Salon">
                     <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2 text-slate-900">6. Bella's Beauty Salon</h3>
-                        <p class="text-slate-600 text-sm mb-4">Hair, nails, bookings via WhatsApp.</p>
-                        <a href="https://portfolio-beauty-saloon-ej63.vercel.app" target="_blank" class="bg-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-pink-700 hover:scale-105 transition-all">View Site →</a>
+                        <h3 class="font-bold text-xl mb-2 text-white">6. Bella's Beauty Salon</h3>
+                        <p class="text-slate-400 text-sm mb-4">Hair, nails, bookings via WhatsApp.</p>
+                        <a href="https://portfolio-beauty-saloon-ej63.vercel.app" target="_blank" class="bg-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-pink-500 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
 
                 <!-- 7. CLEANING -->
-                <div class="site-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300" data-category="trades">
-                    <img src="https://images.pexels.com/photos/4239146/pexels-photo-4239146.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Cleaning">
+                <div class="site-card bg-slate-950/80 rounded-2xl shadow-xl border border-slate-800 overflow-hidden hover:border-indigo-500/50 hover:-translate-y-1 transition duration-300" data-category="trades">
+                    <img src="https://images.pexels.com/photos/4239146/pexels-photo-4239146.jpeg?auto=compress&w=600" class="w-full h-48 object-cover opacity-90" alt="Cleaning">
                     <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2 text-slate-900">7. FreshFold Cleaning</h3>
-                        <p class="text-slate-600 text-sm mb-4">Professional home + office cleaning.</p>
-                        <a href="https://portfolio-cleaning-site-1pxp.vercel.app/" target="_blank" class="bg-teal-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-teal-700 hover:scale-105 transition-all">View Site →</a>
+                        <h3 class="font-bold text-xl mb-2 text-white">7. FreshFold Cleaning</h3>
+                        <p class="text-slate-400 text-sm mb-4">Professional home + office cleaning.</p>
+                        <a href="https://portfolio-cleaning-site-1pxp.vercel.app/" target="_blank" class="bg-teal-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-teal-500 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
 
                 <!-- 8. TRAVEL -->
-                <div class="site-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300" data-category="lifestyle">
-                    <img src="https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Travel">
+                <div class="site-card bg-slate-950/80 rounded-2xl shadow-xl border border-slate-800 overflow-hidden hover:border-indigo-500/50 hover:-translate-y-1 transition duration-300" data-category="lifestyle">
+                    <img src="https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&w=600" class="w-full h-48 object-cover opacity-90" alt="Travel">
                     <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2 text-slate-900">8. Afrika Travel & Tours</h3>
-                        <p class="text-slate-600 text-sm mb-4">Safari packages + booking.</p>
-                        <a href="https://afrika-travel-tours.vercel.app/" target="_blank" class="bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-orange-700 hover:scale-105 transition-all">View Site →</a>
+                        <h3 class="font-bold text-xl mb-2 text-white">8. Afrika Travel & Tours</h3>
+                        <p class="text-slate-400 text-sm mb-4">Safari packages + booking.</p>
+                        <a href="https://afrika-travel-tours.vercel.app/" target="_blank" class="bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-orange-500 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
 
                 <!-- 9. MUSIC STUDIO -->
-                <div class="site-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300" data-category="lifestyle">
-                    <img src="https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Music Studio">
+                <div class="site-card bg-slate-950/80 rounded-2xl shadow-xl border border-slate-800 overflow-hidden hover:border-indigo-500/50 hover:-translate-y-1 transition duration-300" data-category="lifestyle">
+                    <img src="https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg?auto=compress&w=600" class="w-full h-48 object-cover opacity-90" alt="Music Studio">
                     <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2 text-slate-900">9. SoundWave Music Studio</h3>
-                        <p class="text-slate-600 text-sm mb-4">Recording, mixing, mastering.</p>
-                        <a href="https://portfolio-musicstudio.vercel.app/" target="_blank" class="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-purple-700 hover:scale-105 transition-all">View Site →</a>
+                        <h3 class="font-bold text-xl mb-2 text-white">9. SoundWave Music Studio</h3>
+                        <p class="text-slate-400 text-sm mb-4">Recording, mixing, mastering.</p>
+                        <a href="https://portfolio-musicstudio.vercel.app/" target="_blank" class="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-purple-500 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
 
                 <!-- 10. DAILY GIGS CAPETOWN -->
-                <div class="site-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300" data-category="jobs">
-                    <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Jobs">
+                <div class="site-card bg-slate-950/80 rounded-2xl shadow-xl border border-slate-800 overflow-hidden hover:border-indigo-500/50 hover:-translate-y-1 transition duration-300" data-category="jobs">
+                    <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&w=600" class="w-full h-48 object-cover opacity-90" alt="Jobs">
                     <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2 text-slate-900">10. Daily Gigs Cape Town</h3>
-                        <p class="text-slate-600 text-sm mb-4">All Jobs: Waitress, Admin, Cleaning, Construction.</p>
-                        <a href="https://qtp-daily-gigs.vercel.app/" target="_blank" class="bg-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-indigo-700 hover:scale-105 transition-all">View Site →</a>
+                        <h3 class="font-bold text-xl mb-2 text-white">10. Daily Gigs Cape Town</h3>
+                        <p class="text-slate-400 text-sm mb-4">All Jobs: Waitress, Admin, Cleaning, Construction.</p>
+                        <a href="https://qtp-daily-gigs.vercel.app/" target="_blank" class="bg-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-indigo-500 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
 
                 <!-- 11. STRATIQ -->
-                <div class="site-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300" data-category="finance">
-                    <img src="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Forex Trading">
+                <div class="site-card bg-slate-950/80 rounded-2xl shadow-xl border border-slate-800 overflow-hidden hover:border-indigo-500/50 hover:-translate-y-1 transition duration-300" data-category="finance">
+                    <img src="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&w=600" class="w-full h-48 object-cover opacity-90" alt="Forex Trading">
                     <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2 text-slate-900">11. StratIQ - Forex Automation</h3>
-                        <p class="text-slate-600 text-sm mb-4">Forex trading strategy automation platform.</p>
-                        <a href="https://qtp-strat-iq.vercel.app/" target="_blank" class="bg-slate-900 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-slate-800 hover:scale-105 transition-all">View Site →</a>
+                        <h3 class="font-bold text-xl mb-2 text-white">11. StratIQ - Forex Automation</h3>
+                        <p class="text-slate-400 text-sm mb-4">Forex trading strategy automation platform.</p>
+                        <a href="https://qtp-strat-iq.vercel.app/" target="_blank" class="bg-slate-700 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-slate-600 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
 
                 <!-- 12. SALVATION CITY -->
-                <div class="site-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300" data-category="church">
-                    <img src="https://images.pexels.com/photos/1615776/pexels-photo-1615776.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Church">
+                <div class="site-card bg-slate-950/80 rounded-2xl shadow-xl border border-slate-800 overflow-hidden hover:border-indigo-500/50 hover:-translate-y-1 transition duration-300" data-category="church">
+                    <img src="https://images.pexels.com/photos/1615776/pexels-photo-1615776.jpeg?auto=compress&w=600" class="w-full h-48 object-cover opacity-90" alt="Church">
                     <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2 text-slate-900">12. Salvation City Of All Nations</h3>
-                        <p class="text-slate-600 text-sm mb-4">Ministry, sermons, events, donations.</p>
-                        <a href="https://salvation-city-qtp1.vercel.app/" target="_blank" class="bg-amber-700 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-amber-800 hover:scale-105 transition-all">View Site →</a>
+                        <h3 class="font-bold text-xl mb-2 text-white">12. Salvation City Of All Nations</h3>
+                        <p class="text-slate-400 text-sm mb-4">Ministry, sermons, events, donations.</p>
+                        <a href="https://salvation-city-qtp1.vercel.app/" target="_blank" class="bg-amber-700 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-amber-600 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
 
                 <!-- 13. NOMA FASHION -->
-                <div class="site-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300" data-category="ecommerce">
-                    <img src="https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Fashion">
+                <div class="site-card bg-slate-950/80 rounded-2xl shadow-xl border border-slate-800 overflow-hidden hover:border-indigo-500/50 hover:-translate-y-1 transition duration-300" data-category="ecommerce">
+                    <img src="https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&w=600" class="w-full h-48 object-cover opacity-90" alt="Fashion">
                     <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2 text-slate-900">13. NOMA Fashion & Accessories</h3>
-                        <p class="text-slate-600 text-sm mb-4">Boutique, clothing, accessories + WhatsApp orders.</p>
-                        <a href="https://noma-fashions-and-accessories.vercel.app/" target="_blank" class="bg-rose-700 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-rose-800 hover:scale-105 transition-all">View Site →</a>
+                        <h3 class="font-bold text-xl mb-2 text-white">13. NOMA Fashion & Accessories</h3>
+                        <p class="text-slate-400 text-sm mb-4">Boutique, clothing, accessories + WhatsApp orders.</p>
+                        <a href="https://noma-fashions-and-accessories.vercel.app/" target="_blank" class="bg-rose-700 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-rose-600 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TESTIMONIALS -->
-    <section class="py-20 px-6 bg-white border-y border-slate-100">
+    <!-- TESTIMONIALS (LIGHT NEUTRAL BACKGROUND) -->
+    <section class="py-24 px-6 bg-slate-100 text-slate-900 border-b border-slate-200">
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12 text-slate-900">What Clients Say</h2>
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-indigo-600 font-bold text-sm tracking-wider uppercase bg-indigo-50 px-3 py-1 rounded-full border border-indigo-100">Client Success</span>
+                <h2 class="text-3xl font-extrabold mt-3 mb-4 text-slate-900">What Clients Say</h2>
+                <p class="text-slate-600">Feedback from business owners using QTP WEB solutions.</p>
+            </div>
+            
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border border-slate-100">
+                <div class="bg-white p-8 rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-200">
                     <div class="flex text-amber-400 mb-3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="text-slate-600 mb-4">"Got our brand logo and website done together. The logo looks super sharp and we got 12 WhatsApp leads in the first week!"</p>
+                    <p class="text-slate-600 mb-4 text-sm leading-relaxed">"Got our brand logo and website done together. The logo looks super sharp and we got 12 WhatsApp leads in the first week!"</p>
                     <p class="font-bold text-slate-900">- Mike, QTP Handyman</p>
                 </div>
-                <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border border-slate-100">
+                <div class="bg-white p-8 rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-200">
                     <div class="flex text-amber-400 mb-3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="text-slate-600 mb-4">"Professional, quick turnaround, and having our logo, YouTube videos, and WhatsApp buttons all matched up works wonders. 10/10"</p>
+                    <p class="text-slate-600 mb-4 text-sm leading-relaxed">"Professional, quick turnaround, and having our logo, YouTube videos, and WhatsApp buttons all matched up works wonders. 10/10"</p>
                     <p class="font-bold text-slate-900">- Sarah, Bella's Beauty Salon</p>
                 </div>
-                <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border border-slate-100">
+                <div class="bg-white p-8 rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-200">
                     <div class="flex text-amber-400 mb-3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="text-slate-600 mb-4">"Best investment for my business. Complete brand identity and social integration in one clean layout."</p>
+                    <p class="text-slate-600 mb-4 text-sm leading-relaxed">"Best investment for my business. Complete brand identity and social integration in one clean layout."</p>
                     <p class="font-bold text-slate-900">- John, MoveSmart SA</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- VIBRANT PRICING SECTION -->
+    <!-- VIBRANT PRICING SECTION (DARK GRADIENT) -->
     <section id="pricing" class="py-24 px-6 bg-gradient-to-br from-indigo-950 via-slate-900 to-blue-950 text-white relative overflow-hidden">
         <!-- Glowing background decoration blur elements -->
         <div class="absolute -top-40 -left-40 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl pointer-events-none"></div>
@@ -382,11 +388,11 @@
         </div>
     </section>
 
-    <!-- CONTACT / WHATSAPP CALL TO ACTION (FIXED BUTTON WRAP) -->
-    <section id="contact" class="py-20 px-6 bg-gradient-to-r from-indigo-950 to-slate-950 text-white text-center">
+    <!-- CONTACT / WHATSAPP CALL TO ACTION (FIXED BUTTON) -->
+    <section id="contact" class="py-20 px-6 bg-slate-950 text-white text-center border-t border-slate-900">
         <div class="max-w-3xl mx-auto flex flex-col items-center">
             <h2 class="text-3xl font-bold mb-4">Ready to Build Your Brand & Website?</h2>
-            <p class="text-slate-300 mb-8">I create professional custom logos and websites in 48 hours with full WhatsApp, TikTok, YouTube, Facebook, and Instagram integration.</p>
+            <p class="text-slate-400 mb-8">I create professional custom logos and websites in 48 hours with full WhatsApp, TikTok, YouTube, Facebook, and Instagram integration.</p>
             
             <a href="https://wa.me/27837327440?text=Hi,%20I%20want%20a%20logo%20and%20website%20built." target="_blank" class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-bold text-base sm:text-lg px-8 py-4 sm:px-10 sm:py-5 rounded-full shadow-2xl shadow-emerald-500/50 hover:scale-105 hover:from-emerald-400 hover:to-emerald-500 transition-all duration-300 inline-flex items-center gap-3 border border-emerald-400/40 relative whitespace-nowrap">
                 <span class="absolute -top-1 -right-1 flex h-3.5 w-3.5">
@@ -398,7 +404,7 @@
         </div>
     </section>
 
-    <footer class="py-6 text-center bg-slate-950 text-slate-400 text-sm border-t border-slate-900">
+    <footer class="py-6 text-center bg-slate-950 text-slate-500 text-sm border-t border-slate-900">
         &copy; 2026 QTP WEB. Premium Branding & Sites Built.
     </footer>
 </body>
