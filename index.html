@@ -23,10 +23,10 @@
             const buttons = document.querySelectorAll('.filter-btn');
             
             buttons.forEach(btn => {
-                btn.classList.remove('bg-indigo-600', 'text-white');
+                btn.classList.remove('bg-indigo-600', 'text-white', 'shadow-md');
                 btn.classList.add('bg-gray-100', 'text-gray-700');
             });
-            event.target.classList.add('bg-indigo-600', 'text-white');
+            event.target.classList.add('bg-indigo-600', 'text-white', 'shadow-md');
             event.target.classList.remove('bg-gray-100', 'text-gray-700');
 
             sites.forEach(site => {
@@ -49,7 +49,7 @@
                 <img src="IMG-20260821-WA6744.jpg" alt="QTP WEB Logo" class="w-9 h-9 rounded-full object-cover shadow border border-indigo-500/30">
                 <span>QTP <span class="text-indigo-400">WEB</span></span>
             </a>
-            <a href="#pricing" class="bg-indigo-600 text-white px-5 py-2 rounded-full text-sm font-bold shadow hover:bg-indigo-500 transition">View Pricing</a>
+            <a href="#pricing" class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg shadow-indigo-500/25 hover:scale-105 transition-all duration-300">View Pricing</a>
         </div>
     </header>
 
@@ -62,7 +62,15 @@
             </span>
             <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 tracking-tight">I Build Websites That Sell</h1>
             <p class="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">Premium, Mobile-First Business Websites. Designed to get you WhatsApp leads in 24 hours.</p>
-            <a href="#sites" class="bg-indigo-600 text-white font-bold px-8 py-4 rounded-full shadow-xl hover:bg-indigo-500 transition border border-indigo-400/20">View All Sites</a>
+            
+            <!-- STAND-OUT PULSING HERO BUTTON -->
+            <a href="#sites" class="bg-gradient-to-r from-blue-600 via-indigo-600 to-indigo-700 text-white font-bold px-8 py-4 rounded-full shadow-2xl shadow-indigo-500/50 hover:scale-105 transition-all duration-300 border border-indigo-400/30 relative">
+                <span class="absolute -top-1 -right-1 flex h-3 w-3">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                </span>
+                View All 13 Sites
+            </a>
         </div>
     </section>
 
@@ -74,14 +82,14 @@
             
             <!-- FILTER BUTTONS -->
             <div class="flex flex-wrap justify-center gap-3 mb-12">
-                <button onclick="filterSites('all')" class="filter-btn bg-indigo-600 text-white px-5 py-2 rounded-full text-sm font-bold shadow">All</button>
-                <button onclick="filterSites('jobs')" class="filter-btn bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow hover:bg-gray-200">Jobs</button>
-                <button onclick="filterSites('trades')" class="filter-btn bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow hover:bg-gray-200">Trades</button>
-                <button onclick="filterSites('beauty')" class="filter-btn bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow hover:bg-gray-200">Beauty</button>
-                <button onclick="filterSites('lifestyle')" class="filter-btn bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow hover:bg-gray-200">Lifestyle</button>
-                <button onclick="filterSites('church')" class="filter-btn bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow hover:bg-gray-200">Church</button>
-                <button onclick="filterSites('finance')" class="filter-btn bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow hover:bg-gray-200">Finance</button>
-                <button onclick="filterSites('ecommerce')" class="filter-btn bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow hover:bg-gray-200">E-Commerce</button>
+                <button onclick="filterSites('all')" class="filter-btn bg-indigo-600 text-white px-5 py-2 rounded-full text-sm font-bold shadow-md">All</button>
+                <button onclick="filterSites('jobs')" class="filter-btn bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow-sm hover:bg-gray-200 transition">Jobs</button>
+                <button onclick="filterSites('trades')" class="filter-btn bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow-sm hover:bg-gray-200 transition">Trades</button>
+                <button onclick="filterSites('beauty')" class="filter-btn bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow-sm hover:bg-gray-200 transition">Beauty</button>
+                <button onclick="filterSites('lifestyle')" class="filter-btn bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow-sm hover:bg-gray-200 transition">Lifestyle</button>
+                <button onclick="filterSites('church')" class="filter-btn bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow-sm hover:bg-gray-200 transition">Church</button>
+                <button onclick="filterSites('finance')" class="filter-btn bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow-sm hover:bg-gray-200 transition">Finance</button>
+                <button onclick="filterSites('ecommerce')" class="filter-btn bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-bold shadow-sm hover:bg-gray-200 transition">E-Commerce</button>
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -92,7 +100,7 @@
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2 text-slate-900">1. MoveSmart SA</h3>
                         <p class="text-slate-600 text-sm mb-4">Reliable home & office removals.</p>
-                        <a href="https://portfolio-moving.vercel.app" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block hover:bg-blue-700 transition">View Site →</a>
+                        <a href="https://portfolio-moving.vercel.app" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-blue-700 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
 
@@ -102,7 +110,7 @@
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2 text-slate-900">2. QTP Handyman</h3>
                         <p class="text-slate-600 text-sm mb-4">Plumbing, electrical, and general repairs.</p>
-                        <a href="https://portfolio-handyman-site-27q3.vercel.app" target="_blank" class="bg-amber-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block hover:bg-amber-700 transition">View Site →</a>
+                        <a href="https://portfolio-handyman-site-27q3.vercel.app" target="_blank" class="bg-amber-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-amber-700 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
 
@@ -112,7 +120,7 @@
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2 text-slate-900">3. Pipe Pro Plumbers</h3>
                         <p class="text-slate-600 text-sm mb-4">24/7 emergency plumber services.</p>
-                        <a href="https://portfolio-plumping-site-qw77.vercel.app" target="_blank" class="bg-sky-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block hover:bg-sky-700 transition">View Site →</a>
+                        <a href="https://portfolio-plumping-site-qw77.vercel.app" target="_blank" class="bg-sky-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-sky-700 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
 
@@ -122,7 +130,7 @@
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2 text-slate-900">4. GreenThumb Landscaping</h3>
                         <p class="text-slate-600 text-sm mb-4">Garden design & maintenance.</p>
-                        <a href="https://portfolio-landscaping-m6zq.vercel.app" target="_blank" class="bg-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block hover:bg-emerald-700 transition">View Site →</a>
+                        <a href="https://portfolio-landscaping-m6zq.vercel.app" target="_blank" class="bg-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-emerald-700 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
 
@@ -132,7 +140,7 @@
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2 text-slate-900">5. Elite Auto Detailing</h3>
                         <p class="text-slate-600 text-sm mb-4">Car wash & ceramic coating.</p>
-                        <a href="https://portfolio-car-detailing-c4in.vercel.app" target="_blank" class="bg-rose-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block hover:bg-rose-700 transition">View Site →</a>
+                        <a href="https://portfolio-car-detailing-c4in.vercel.app" target="_blank" class="bg-rose-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-rose-700 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
 
@@ -142,7 +150,7 @@
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2 text-slate-900">6. Bella's Beauty Salon</h3>
                         <p class="text-slate-600 text-sm mb-4">Hair, nails, bookings via WhatsApp.</p>
-                        <a href="https://portfolio-beauty-saloon-ej63.vercel.app" target="_blank" class="bg-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block hover:bg-pink-700 transition">View Site →</a>
+                        <a href="https://portfolio-beauty-saloon-ej63.vercel.app" target="_blank" class="bg-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-pink-700 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
 
@@ -152,7 +160,7 @@
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2 text-slate-900">7. FreshFold Cleaning</h3>
                         <p class="text-slate-600 text-sm mb-4">Professional home + office cleaning.</p>
-                        <a href="https://portfolio-cleaning-site-1pxp.vercel.app/" target="_blank" class="bg-teal-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block hover:bg-teal-700 transition">View Site →</a>
+                        <a href="https://portfolio-cleaning-site-1pxp.vercel.app/" target="_blank" class="bg-teal-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-teal-700 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
 
@@ -162,7 +170,7 @@
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2 text-slate-900">8. Afrika Travel & Tours</h3>
                         <p class="text-slate-600 text-sm mb-4">Safari packages + booking.</p>
-                        <a href="https://afrika-travel-tours.vercel.app/" target="_blank" class="bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block hover:bg-orange-700 transition">View Site →</a>
+                        <a href="https://afrika-travel-tours.vercel.app/" target="_blank" class="bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-orange-700 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
 
@@ -172,7 +180,7 @@
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2 text-slate-900">9. SoundWave Music Studio</h3>
                         <p class="text-slate-600 text-sm mb-4">Recording, mixing, mastering.</p>
-                        <a href="https://portfolio-musicstudio.vercel.app/" target="_blank" class="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block hover:bg-purple-700 transition">View Site →</a>
+                        <a href="https://portfolio-musicstudio.vercel.app/" target="_blank" class="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-purple-700 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
 
@@ -182,7 +190,7 @@
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2 text-slate-900">10. Daily Gigs Cape Town</h3>
                         <p class="text-slate-600 text-sm mb-4">All Jobs: Waitress, Admin, Cleaning, Construction.</p>
-                        <a href="https://qtp-daily-gigs.vercel.app/" target="_blank" class="bg-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block hover:bg-indigo-700 transition">View Site →</a>
+                        <a href="https://qtp-daily-gigs.vercel.app/" target="_blank" class="bg-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-indigo-700 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
 
@@ -192,7 +200,7 @@
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2 text-slate-900">11. StratIQ - Forex Automation</h3>
                         <p class="text-slate-600 text-sm mb-4">Forex trading strategy automation platform.</p>
-                        <a href="https://qtp-strat-iq.vercel.app/" target="_blank" class="bg-slate-900 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block hover:bg-slate-800 transition">View Site →</a>
+                        <a href="https://qtp-strat-iq.vercel.app/" target="_blank" class="bg-slate-900 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-slate-800 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
 
@@ -202,7 +210,7 @@
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2 text-slate-900">12. Salvation City Of All Nations</h3>
                         <p class="text-slate-600 text-sm mb-4">Ministry, sermons, events, donations.</p>
-                        <a href="https://salvation-city-qtp1.vercel.app/" target="_blank" class="bg-amber-700 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block hover:bg-amber-800 transition">View Site →</a>
+                        <a href="https://salvation-city-qtp1.vercel.app/" target="_blank" class="bg-amber-700 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-amber-800 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
 
@@ -212,7 +220,7 @@
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2 text-slate-900">13. NOMA Fashion & Accessories</h3>
                         <p class="text-slate-600 text-sm mb-4">Boutique, clothing, accessories + WhatsApp orders.</p>
-                        <a href="https://noma-fashions-and-accessories.vercel.app/" target="_blank" class="bg-rose-700 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block hover:bg-rose-800 transition">View Site →</a>
+                        <a href="https://noma-fashions-and-accessories.vercel.app/" target="_blank" class="bg-rose-700 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-rose-800 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
 
@@ -261,12 +269,12 @@
                         <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Mobile Responsive</li>
                         <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> WhatsApp Button</li>
                     </ul>
-                    <a href="https://wa.me/27837327440?text=Hi,%20I%20want%20the%20Starter%20package" target="_blank" class="w-full bg-slate-100 text-slate-800 font-bold py-3 rounded-full block text-center hover:bg-slate-200 transition">Get Started</a>
+                    <a href="https://wa.me/27837327440?text=Hi,%20I%20want%20the%20Starter%20package" target="_blank" class="w-full bg-slate-100 text-slate-800 font-bold py-3 rounded-full block text-center hover:bg-slate-200 hover:scale-[1.02] transition-all">Get Started</a>
                 </div>
 
-                <!-- PRO -->
+                <!-- PRO - HIGHLIGHTED -->
                 <div class="bg-slate-900 text-white p-8 rounded-2xl shadow-2xl border-2 border-indigo-500 relative transform md:-translate-y-2">
-                    <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Most Popular</span>
+                    <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">Most Popular</span>
                     <h3 class="text-xl font-bold mb-2">Business Pro</h3>
                     <p class="text-indigo-200 text-sm mb-6">Best value for growth</p>
                     <p class="text-4xl font-extrabold mb-6">R2,999<span class="text-lg font-normal text-indigo-200">/once</span></p>
@@ -275,7 +283,8 @@
                         <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Premium Design</li>
                         <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> WhatsApp + Lead Form</li>
                     </ul>
-                    <a href="https://wa.me/27837327440?text=Hi,%20I%20want%20the%20Business%20Pro%20package" target="_blank" class="w-full bg-indigo-600 text-white font-bold py-3 rounded-full block text-center hover:bg-indigo-500 transition shadow-lg">Get Pro</a>
+                    <!-- High-Impact Pro Button -->
+                    <a href="https://wa.me/27837327440?text=Hi,%20I%20want%20the%20Business%20Pro%20package" target="_blank" class="w-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-bold py-3 rounded-full block text-center shadow-lg shadow-emerald-500/30 hover:scale-105 transition-all">Get Pro Now 🚀</a>
                 </div>
 
                 <!-- PREMIUM -->
@@ -288,19 +297,25 @@
                         <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Product Catalog</li>
                         <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> WhatsApp Orders</li>
                     </ul>
-                    <a href="https://wa.me/27837327440?text=Hi,%20I%20want%20the%20E-Commerce%20package" target="_blank" class="w-full bg-slate-100 text-slate-800 font-bold py-3 rounded-full block text-center hover:bg-slate-200 transition">Get Premium</a>
+                    <a href="https://wa.me/27837327440?text=Hi,%20I%20want%20the%20E-Commerce%20package" target="_blank" class="w-full bg-slate-100 text-slate-800 font-bold py-3 rounded-full block text-center hover:bg-slate-200 hover:scale-[1.02] transition-all">Get Premium</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- CONTACT / WHATSAPP CALL TO ACTION -->
     <section id="contact" class="py-20 px-6 bg-gradient-to-r from-indigo-900 to-slate-900 text-white text-center">
-        <div class="max-w-3xl mx-auto flex-col items-center">
+        <div class="max-w-3xl mx-auto flex flex-col items-center">
             <h2 class="text-3xl font-bold mb-4">Ready to Start?</h2>
             <p class="text-slate-300 mb-8">I build custom sites in 48 hours. Mobile ready + WhatsApp integration.</p>
-            <a href="https://wa.me/27837327440" target="_blank" class="bg-emerald-600 text-white font-bold px-8 py-4 rounded-full shadow-xl hover:bg-emerald-500 transition inline-flex items-center gap-2">
-                <i class="fa-brands fa-whatsapp text-2xl"></i> WhatsApp Me +27 83 732 7440
+            
+            <!-- HIGH CONVERSION GLOWING WHATSAPP BUTTON -->
+            <a href="https://wa.me/27837327440?text=Hi,%20I%20want%20to%20get%20a%20website%20built." target="_blank" class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-bold text-lg px-10 py-5 rounded-full shadow-2xl shadow-emerald-500/50 hover:scale-105 hover:from-emerald-400 hover:to-emerald-500 transition-all duration-300 inline-flex items-center gap-3 border border-emerald-400/40 relative">
+                <span class="absolute -top-1 -right-1 flex h-3.5 w-3.5">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-white"></span>
+                </span>
+                <i class="fa-brands fa-whatsapp text-3xl"></i> WhatsApp Me +27 83 732 7440
             </a>
         </div>
     </section>
