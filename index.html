@@ -7,7 +7,6 @@
     
     <!-- Favicon & Social Share Meta Tags -->
     <link rel="icon" type="image/jpeg" href="IMG-20260821-WA6744.jpg">
-    <!-- WhatsApp & Facebook Favicons / Social Touch Icons -->
     <link rel="apple-touch-icon" href="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
     <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg">
     
@@ -45,7 +44,6 @@
     <header class="sticky top-0 w-full bg-slate-900/95 backdrop-blur-md shadow-md z-50 text-white">
         <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="#" class="flex items-center gap-2.5 font-bold text-xl group">
-                <!-- Header Logo -->
                 <img src="IMG-20260821-WA6744.jpg" alt="QTP WEB Logo" class="w-9 h-9 rounded-full object-cover shadow border border-indigo-500/30">
                 <span>QTP <span class="text-indigo-400">WEB</span></span>
             </a>
@@ -53,18 +51,26 @@
         </div>
     </header>
 
-    <!-- HERO -->
-    <section class="py-24 px-6 text-center bg-gradient-to-br from-slate-900 via-indigo-950 to-blue-900 text-white relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#4f46e5_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        <div class="max-w-3xl mx-auto flex flex-col items-center relative z-10">
-            <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-semibold px-3 py-1 rounded-full mb-6 flex items-center gap-2">
+    <!-- HERO WITH BACKGROUND VIDEO & FLOATING GLASS CARD -->
+    <section class="py-28 px-6 text-center text-white relative overflow-hidden flex items-center justify-center min-h-[600px]">
+        <!-- Background Video -->
+        <div class="absolute inset-0 w-full h-full overflow-hidden z-0">
+            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-40">
+                <source src="https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-slate-950/70"></div>
+        </div>
+
+        <!-- Floating Glass Card for Hero Content -->
+        <div class="max-w-3xl mx-auto flex flex-col items-center relative z-10 backdrop-blur-md bg-slate-900/60 p-8 sm:p-12 rounded-3xl border border-indigo-500/30 shadow-2xl shadow-indigo-950/50">
+            <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs font-semibold px-4 py-1.5 rounded-full mb-6 flex items-center gap-2 backdrop-blur-sm shadow-inner">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> 24-Hour WhatsApp Lead Setup
             </span>
-            <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 tracking-tight">I Build Websites That Sell</h1>
-            <p class="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">Premium, Mobile-First Business Websites. Designed to get you WhatsApp leads in 24 hours.</p>
+            <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 tracking-tight text-white drop-shadow-md">I Build Websites That Sell</h1>
+            <p class="text-lg text-slate-200 mb-8 max-w-2xl mx-auto drop-shadow">Premium, Mobile-First Business Websites. Designed to get you WhatsApp leads in 24 hours.</p>
             
             <!-- STAND-OUT PULSING HERO BUTTON -->
-            <a href="#services" class="bg-gradient-to-r from-blue-600 via-indigo-600 to-indigo-700 text-white font-bold px-8 py-4 rounded-full shadow-2xl shadow-indigo-500/50 hover:scale-105 transition-all duration-300 border border-indigo-400/30 relative">
+            <a href="#services" class="bg-gradient-to-r from-blue-600 via-indigo-600 to-indigo-700 text-white font-bold px-8 py-4 rounded-full shadow-2xl shadow-indigo-500/50 hover:scale-105 transition-all duration-300 border border-indigo-400/40 relative">
                 <span class="absolute -top-1 -right-1 flex h-3 w-3">
                   <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
@@ -74,8 +80,8 @@
         </div>
     </section>
 
-    <!-- SERVICES / WHAT WE DO SECTION -->
-    <section id="services" class="py-20 px-6 bg-white border-y border-slate-100">
+    <!-- SERVICES / WHAT WE DO SECTION (FLOATING CARDS) -->
+    <section id="services" class="py-24 px-6 bg-slate-100/60 border-y border-slate-200/60">
         <div class="max-w-7xl mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-indigo-600 font-bold text-sm tracking-wider uppercase bg-indigo-50 px-3 py-1 rounded-full border border-indigo-100">Full-Stack Capabilities</span>
@@ -85,54 +91,54 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Service 1 -->
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition-all">
-                    <div class="w-12 h-12 bg-indigo-600/10 text-indigo-600 rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+                <!-- Service 1: Landing Pages (Floating Highlight Box) -->
+                <div class="bg-white p-8 rounded-3xl border border-indigo-100 shadow-xl shadow-indigo-900/5 hover:-translate-y-1.5 hover:shadow-2xl hover:border-indigo-300 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-gradient-to-br from-indigo-500 to-blue-600 text-white rounded-2xl flex items-center justify-center text-xl font-bold mb-6 shadow-lg shadow-indigo-500/30 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-bolt"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-slate-900">High-Converting Landing Pages</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">Lightning-fast single-page websites optimized specifically for capturing leads, promoting special offers, or launching products in 24–48 hours.</p>
                 </div>
 
-                <!-- Service 2 -->
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition-all">
-                    <div class="w-12 h-12 bg-blue-600/10 text-blue-600 rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+                <!-- Service 2: Multi-Page (Floating Highlight Box) -->
+                <div class="bg-white p-8 rounded-3xl border border-blue-100 shadow-xl shadow-blue-900/5 hover:-translate-y-1.5 hover:shadow-2xl hover:border-blue-300 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-sky-600 text-white rounded-2xl flex items-center justify-center text-xl font-bold mb-6 shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-briefcase"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-slate-900">Multi-Page Business Websites</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">Professional multi-page platforms for service providers, trades, law firms, consultants, and churches to establish serious market authority.</p>
                 </div>
 
-                <!-- Service 3 -->
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition-all">
-                    <div class="w-12 h-12 bg-emerald-600/10 text-emerald-600 rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+                <!-- Service 3: E-Commerce (Floating Highlight Box) -->
+                <div class="bg-white p-8 rounded-3xl border border-emerald-100 shadow-xl shadow-emerald-900/5 hover:-translate-y-1.5 hover:shadow-2xl hover:border-emerald-300 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 text-white rounded-2xl flex items-center justify-center text-xl font-bold mb-6 shadow-lg shadow-emerald-500/30 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-slate-900">E-Commerce & Online Stores</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">Product catalogs and storefronts equipped with secure checkout layouts and direct WhatsApp order integrations so customers buy effortlessly.</p>
                 </div>
 
-                <!-- Service 4 -->
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition-all">
-                    <div class="w-12 h-12 bg-purple-600/10 text-purple-600 rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+                <!-- Service 4: Mobile-First (Floating Highlight Box) -->
+                <div class="bg-white p-8 rounded-3xl border border-purple-100 shadow-xl shadow-purple-900/5 hover:-translate-y-1.5 hover:shadow-2xl hover:border-purple-300 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-fuchsia-600 text-white rounded-2xl flex items-center justify-center text-xl font-bold mb-6 shadow-lg shadow-purple-500/30 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-mobile-screen-button"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-slate-900">Mobile-First Optimization</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">Because over 80% of your clients browse on phones, every layout is rigorously built to look flawless and load instantly on mobile devices.</p>
                 </div>
 
-                <!-- Service 5 -->
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition-all">
-                    <div class="w-12 h-12 bg-amber-600/10 text-amber-600 rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+                <!-- Service 5: WhatsApp (Floating Highlight Box) -->
+                <div class="bg-white p-8 rounded-3xl border border-amber-100 shadow-xl shadow-amber-900/5 hover:-translate-y-1.5 hover:shadow-2xl hover:border-amber-300 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-600 text-white rounded-2xl flex items-center justify-center text-xl font-bold mb-6 shadow-lg shadow-amber-500/30 group-hover:scale-110 transition-transform">
                         <i class="fa-brands fa-whatsapp"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-slate-900">Instant WhatsApp Integration</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">Custom click-to-chat triggers and pre-filled inquiry buttons that funnel prospective buyers straight into your WhatsApp chats.</p>
                 </div>
 
-                <!-- Service 6 -->
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition-all">
-                    <div class="w-12 h-12 bg-rose-600/10 text-rose-600 rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+                <!-- Service 6: Web Applications (Floating Highlight Box) -->
+                <div class="bg-white p-8 rounded-3xl border border-rose-100 shadow-xl shadow-rose-900/5 hover:-translate-y-1.5 hover:shadow-2xl hover:border-rose-300 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-gradient-to-br from-rose-500 to-pink-600 text-white rounded-2xl flex items-center justify-center text-xl font-bold mb-6 shadow-lg shadow-rose-500/30 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-code"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-slate-900">Custom Web Applications</h3>
@@ -162,8 +168,7 @@
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- 1. MOVING - TRADES -->
+                <!-- 1. MOVING -->
                 <div class="site-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300" data-category="trades">
                     <img src="https://images.pexels.com/photos/4481325/pexels-photo-4481325.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Moving Truck">
                     <div class="p-6">
@@ -173,7 +178,7 @@
                     </div>
                 </div>
 
-                <!-- 2. HANDYMAN - TRADES -->
+                <!-- 2. HANDYMAN -->
                 <div class="site-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300" data-category="trades">
                     <img src="https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Handyman">
                     <div class="p-6">
@@ -183,7 +188,7 @@
                     </div>
                 </div>
 
-                <!-- 3. PLUMBING - TRADES -->
+                <!-- 3. PLUMBING -->
                 <div class="site-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300" data-category="trades">
                     <img src="https://images.pexels.com/photos/5691544/pexels-photo-5691544.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Plumbing">
                     <div class="p-6">
@@ -193,7 +198,7 @@
                     </div>
                 </div>
 
-                <!-- 4. LANDSCAPING - TRADES -->
+                <!-- 4. LANDSCAPING -->
                 <div class="site-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300" data-category="trades">
                     <img src="https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Landscaping">
                     <div class="p-6">
@@ -203,7 +208,7 @@
                     </div>
                 </div>
 
-                <!-- 5. CAR DETAILING - LIFESTYLE -->
+                <!-- 5. CAR DETAILING -->
                 <div class="site-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300" data-category="lifestyle">
                     <img src="https://images.pexels.com/photos/2126476/pexels-photo-2126476.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Car Detailing">
                     <div class="p-6">
@@ -213,7 +218,7 @@
                     </div>
                 </div>
 
-                <!-- 6. BEAUTY SALON - BEAUTY -->
+                <!-- 6. BEAUTY SALON -->
                 <div class="site-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300" data-category="beauty">
                     <img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Beauty Salon">
                     <div class="p-6">
@@ -223,7 +228,7 @@
                     </div>
                 </div>
 
-                <!-- 7. CLEANING - TRADES -->
+                <!-- 7. CLEANING -->
                 <div class="site-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300" data-category="trades">
                     <img src="https://images.pexels.com/photos/4239146/pexels-photo-4239146.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Cleaning">
                     <div class="p-6">
@@ -233,7 +238,7 @@
                     </div>
                 </div>
 
-                <!-- 8. TRAVEL - LIFESTYLE -->
+                <!-- 8. TRAVEL -->
                 <div class="site-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300" data-category="lifestyle">
                     <img src="https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Travel">
                     <div class="p-6">
@@ -243,7 +248,7 @@
                     </div>
                 </div>
 
-                <!-- 9. MUSIC STUDIO - LIFESTYLE -->
+                <!-- 9. MUSIC STUDIO -->
                 <div class="site-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300" data-category="lifestyle">
                     <img src="https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Music Studio">
                     <div class="p-6">
@@ -253,7 +258,7 @@
                     </div>
                 </div>
 
-                <!-- 10. DAILY GIGS CAPETOWN - JOBS -->
+                <!-- 10. DAILY GIGS CAPETOWN -->
                 <div class="site-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300" data-category="jobs">
                     <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Jobs">
                     <div class="p-6">
@@ -263,7 +268,7 @@
                     </div>
                 </div>
 
-                <!-- 11. STRATIQ - FINANCE -->
+                <!-- 11. STRATIQ -->
                 <div class="site-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300" data-category="finance">
                     <img src="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Forex Trading">
                     <div class="p-6">
@@ -273,7 +278,7 @@
                     </div>
                 </div>
 
-                <!-- 12. SALVATION CITY - CHURCH -->
+                <!-- 12. SALVATION CITY -->
                 <div class="site-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300" data-category="church">
                     <img src="https://images.pexels.com/photos/1615776/pexels-photo-1615776.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Church">
                     <div class="p-6">
@@ -283,7 +288,7 @@
                     </div>
                 </div>
 
-                <!-- 13. NOMA FASHION - ECOMMERCE -->
+                <!-- 13. NOMA FASHION -->
                 <div class="site-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300" data-category="ecommerce">
                     <img src="https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&w=600" class="w-full h-48 object-cover" alt="Fashion">
                     <div class="p-6">
@@ -292,7 +297,6 @@
                         <a href="https://noma-fashions-and-accessories.vercel.app/" target="_blank" class="bg-rose-700 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block shadow hover:bg-rose-800 hover:scale-105 transition-all">View Site →</a>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -352,7 +356,6 @@
                         <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Premium Design</li>
                         <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> WhatsApp + Lead Form</li>
                     </ul>
-                    <!-- High-Impact Pro Button -->
                     <a href="https://wa.me/27837327440?text=Hi,%20I%20want%20the%20Business%20Pro%20package" target="_blank" class="w-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-bold py-3 rounded-full block text-center shadow-lg shadow-emerald-500/30 hover:scale-105 transition-all">Get Pro Now 🚀</a>
                 </div>
 
@@ -378,7 +381,6 @@
             <h2 class="text-3xl font-bold mb-4">Ready to Start?</h2>
             <p class="text-slate-300 mb-8">I build custom sites in 48 hours. Mobile ready + WhatsApp integration.</p>
             
-            <!-- HIGH CONVERSION GLOWING WHATSAPP BUTTON -->
             <a href="https://wa.me/27837327440?text=Hi,%20I%20want%20to%20get%20a%20website%20built." target="_blank" class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-bold text-lg px-10 py-5 rounded-full shadow-2xl shadow-emerald-500/50 hover:scale-105 hover:from-emerald-400 hover:to-emerald-500 transition-all duration-300 inline-flex items-center gap-3 border border-emerald-400/40 relative">
                 <span class="absolute -top-1 -right-1 flex h-3.5 w-3.5">
                   <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
